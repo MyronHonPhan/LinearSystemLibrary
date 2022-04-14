@@ -1,0 +1,6 @@
+/Users/myronphan/cpp_tests/out/build/CMakeFiles/a.out.dir
+/Users/myronphan/cpp_tests/out/build/CMakeFiles/edit_cache.dir
+/Users/myronphan/cpp_tests/out/build/CMakeFiles/rebuild_cache.dir
+/Users/myronphan/cpp_tests/out/build/Adder/CMakeFiles/adder.dir
+/Users/myronphan/cpp_tests/out/build/Adder/CMakeFiles/edit_cache.dir
+/Users/myronphan/cpp_tests/out/build/Adder/CMakeFiles/rebuild_cache.dir
