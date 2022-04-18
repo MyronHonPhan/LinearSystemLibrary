@@ -1,1 +1,1 @@
-g++ Vector.cpp; ./a.out
+g++ Matrix.cpp; ./a.out

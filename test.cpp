@@ -1,28 +1,27 @@
 #include <iostream>
 
-double vals[] = {10.1, 12.6, 33.1, 24.1, 50.0};
+class Entity {
+public:
+    virtual std::string getName() { return "Entity!";}
+};
 
-int& hello(int& i) {
-    return i;
+class Player : public Entity {
+public: 
+    Player(const std::string& name)
+        : m_Name(name) {}
+
+    std::string getName() { return m_Name;}
+private:
+    std::string m_Name;
+};
+
+void PrintName(Entity* entity) {
+    std::cout << entity->getName() <<std::endl;
 }
-
 int main() {
-    float arr[3];
-
-    float* ptr;
-
-    for (int i =0;i<3;i++) {
-        arr[i] = i;
-        std::cout << &arr[i] <<std::endl;
-    }
-
-    ptr = arr;
-
-    for (int i =0;i<3;i++) {
-        std::cout << ptr+i <<std::endl;
-    }
-
-    const char* message = "This program is finished.";
-    std::cout << message << "\n";
+    Entity* e = new Entity;
+    PrintName(e);
+    Player* p = new Player("Myron");
+    PrintName(p);
     return 0;
 }

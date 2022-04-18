@@ -4,7 +4,7 @@ set(CMAKE_CXX_STANDARD 14)
 
 project(a.out)
 
-add_executable(${PROJECT_NAME} main.cpp)
+add_executable(${PROJECT_NAME} test.cpp)
 
 add_subdirectory(Adder)
 
