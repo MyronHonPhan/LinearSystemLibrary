@@ -1,11 +1,15 @@
 cmake_minimum_required(VERSION 3.22.2)
 
+set(CMAKE_CXX_STANDARD 14)
+
 project(a.out)
 
-add_executable(${PROJECT_NAME} test.cpp)
+add_executable(${PROJECT_NAME} main.cpp)
 
 add_subdirectory(Adder)
 
-target_include_directories(${PROJECT_NAME} PUBLIC Adder)
+add_subdirectory(external/glfw)
 
-target_link_libraries(${PROJECT_NAME} adder)
+target_include_directories(${PROJECT_NAME} PUBLIC Adder PUBLIC external/glfw/include)
+
+target_link_libraries(${PROJECT_NAME} adder glfw)

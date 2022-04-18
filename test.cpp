@@ -1,12 +1,28 @@
 #include <iostream>
-#include <adder.h>
 
-void Log(const char* message) {
-    std::cout << message << std::endl;
+double vals[] = {10.1, 12.6, 33.1, 24.1, 50.0};
+
+int& hello(int& i) {
+    return i;
 }
+
 int main() {
-    Log("hi");
-    std::cout << "hello" <<std::endl;
-    std::cout << add(1.1,4.5) <<std::endl;
+    float arr[3];
+
+    float* ptr;
+
+    for (int i =0;i<3;i++) {
+        arr[i] = i;
+        std::cout << &arr[i] <<std::endl;
+    }
+
+    ptr = arr;
+
+    for (int i =0;i<3;i++) {
+        std::cout << ptr+i <<std::endl;
+    }
+
+    const char* message = "This program is finished.";
+    std::cout << message << "\n";
     return 0;
 }

@@ -1,0 +1,1 @@
+g++ Vector.cpp; ./a.out
