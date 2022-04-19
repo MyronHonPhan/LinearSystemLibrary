@@ -1,35 +1,44 @@
 #include <iostream>
+#include <GLFW/glfw3.h>
 
-struct Entity {
-    Entity() { std::cout << "Created Something!" <<std::endl;}
+int main(void)
+{
+    GLFWwindow* window;
 
-    int getEntity() const{
-        return mX;
+    /* Initialize the library */
+    if (!glfwInit())
+        return -1;
+
+    /* Create a windowed mode window and its OpenGL context */
+    window = glfwCreateWindow(640, 480, "Hello World", NULL, NULL);
+    if (!window)
+    {
+        glfwTerminate();
+        return -1;
     }
 
-    ~Entity() {std::cout << "Deleted Something!" << std::endl;}
-private:
-    int mX, mY;
-};
+    /* Make the window's context current */
+    glfwMakeContextCurrent(window);
 
-void printEntity(const Entity& e) {
-    // e is const, we cannot modify anything within that instance
+    /* Loop until the user closes the window */
+    while (!glfwWindowShouldClose(window))
+    {
+        /* Render here */
+        glClear(GL_COLOR_BUFFER_BIT);
 
-    std::cout << e.getEntity() <<std::endl;
-}
+        glBegin(GL_TRIANGLES);
+        glVertex2f(-0.5f,-0.5f);
+        glVertex2f(0.0f,0.5f);
+        glVertex2f(0.5f,-0.5f);
+        glEnd();
 
-void Log(int a) {
-    std::cout << "Current Value is: " << a << std::endl;
-}
+        /* Swap front and back buffers */
+        glfwSwapBuffers(window);
 
-void Increment(int& a) {
-    a++;
-    std::cout << "Incremented Value is: " << a << std::endl;
-}
+        /* Poll for and process events */
+        glfwPollEvents();
+    }
 
-int main() {
-    int a = 0;
-    Increment(a);
-    Log(a);
+    glfwTerminate();
     return 0;
 }

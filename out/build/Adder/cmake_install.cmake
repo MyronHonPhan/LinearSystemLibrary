@@ -1,4 +1,4 @@
-# Install script for directory: /Users/myronphan/cpp_tests/Adder
+# Install script for directory: /Users/myronphan/LinearSystemLibrary/Adder
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
