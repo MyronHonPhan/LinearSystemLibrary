@@ -10,11 +10,13 @@ add_subdirectory(Adder)
 
 add_subdirectory(external/glfw)
 
-add_subdirectory(external/glew)
+add_subdirectory(external/glew/build/cmake)
 
-target_include_directories(${PROJECT_NAME} PUBLIC Adder PUBLIC external/glfw/include)
+target_include_directories(${PROJECT_NAME} PUBLIC Adder PUBLIC external/glfw/include PUBLIC external/glfw/deps/glad  PUBLIC external/glew/include)
 
-target_link_libraries(${PROJECT_NAME} adder glfw)
+target_link_libraries(${PROJECT_NAME} adder glfw glew_s)
+
+target_link_directories(${PROJECT_NAME} PUBLIC external/glfw/deps/glad)
 
 find_package(OpenGL REQUIRED)
 

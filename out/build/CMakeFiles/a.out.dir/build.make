@@ -94,6 +94,7 @@ a.out: CMakeFiles/a.out.dir/testing.cpp.o
 a.out: CMakeFiles/a.out.dir/build.make
 a.out: Adder/libadder.a
 a.out: external/glfw/src/libglfw3.a
+a.out: lib/libGLEW.a
 a.out: /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk/System/Library/Frameworks/OpenGL.framework/OpenGL.tbd
 a.out: CMakeFiles/a.out.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable a.out"

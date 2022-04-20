@@ -226,6 +226,58 @@ update_mappings/fast:
 	$(MAKE) $(MAKESILENT) -f external/glfw/src/CMakeFiles/update_mappings.dir/build.make external/glfw/src/CMakeFiles/update_mappings.dir/build
 .PHONY : update_mappings/fast
 
+#=============================================================================
+# Target rules for targets named glew
+
+# Build rule for target.
+glew: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 glew
+.PHONY : glew
+
+# fast build rule for target.
+glew/fast:
+	$(MAKE) $(MAKESILENT) -f external/glew/build/cmake/CMakeFiles/glew.dir/build.make external/glew/build/cmake/CMakeFiles/glew.dir/build
+.PHONY : glew/fast
+
+#=============================================================================
+# Target rules for targets named glew_s
+
+# Build rule for target.
+glew_s: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 glew_s
+.PHONY : glew_s
+
+# fast build rule for target.
+glew_s/fast:
+	$(MAKE) $(MAKESILENT) -f external/glew/build/cmake/CMakeFiles/glew_s.dir/build.make external/glew/build/cmake/CMakeFiles/glew_s.dir/build
+.PHONY : glew_s/fast
+
+#=============================================================================
+# Target rules for targets named glewinfo
+
+# Build rule for target.
+glewinfo: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 glewinfo
+.PHONY : glewinfo
+
+# fast build rule for target.
+glewinfo/fast:
+	$(MAKE) $(MAKESILENT) -f external/glew/build/cmake/CMakeFiles/glewinfo.dir/build.make external/glew/build/cmake/CMakeFiles/glewinfo.dir/build
+.PHONY : glewinfo/fast
+
+#=============================================================================
+# Target rules for targets named visualinfo
+
+# Build rule for target.
+visualinfo: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 visualinfo
+.PHONY : visualinfo
+
+# fast build rule for target.
+visualinfo/fast:
+	$(MAKE) $(MAKESILENT) -f external/glew/build/cmake/CMakeFiles/visualinfo.dir/build.make external/glew/build/cmake/CMakeFiles/visualinfo.dir/build
+.PHONY : visualinfo/fast
+
 testing.o: testing.cpp.o
 .PHONY : testing.o
 
@@ -266,7 +318,11 @@ help:
 	@echo "... update_mappings"
 	@echo "... a.out"
 	@echo "... adder"
+	@echo "... glew"
+	@echo "... glew_s"
+	@echo "... glewinfo"
 	@echo "... glfw"
+	@echo "... visualinfo"
 	@echo "... testing.o"
 	@echo "... testing.i"
 	@echo "... testing.s"
