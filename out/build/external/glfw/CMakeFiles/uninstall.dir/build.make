@@ -44,10 +44,10 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /usr/local/Cellar/cmake/3.22.2/bin/cmake
+CMAKE_COMMAND = /opt/homebrew/Cellar/cmake/3.22.2/bin/cmake
 
 # The command to remove a file.
-RM = /usr/local/Cellar/cmake/3.22.2/bin/cmake -E rm -f
+RM = /opt/homebrew/Cellar/cmake/3.22.2/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
@@ -67,7 +67,7 @@ include external/glfw/CMakeFiles/uninstall.dir/compiler_depend.make
 include external/glfw/CMakeFiles/uninstall.dir/progress.make
 
 external/glfw/CMakeFiles/uninstall:
-	cd /Users/myronphan/LinearSystemLibrary/out/build/external/glfw && /usr/local/Cellar/cmake/3.22.2/bin/cmake -P /Users/myronphan/LinearSystemLibrary/out/build/external/glfw/cmake_uninstall.cmake
+	cd /Users/myronphan/LinearSystemLibrary/out/build/external/glfw && /opt/homebrew/Cellar/cmake/3.22.2/bin/cmake -P /Users/myronphan/LinearSystemLibrary/out/build/external/glfw/cmake_uninstall.cmake
 
 uninstall: external/glfw/CMakeFiles/uninstall
 uninstall: external/glfw/CMakeFiles/uninstall.dir/build.make
