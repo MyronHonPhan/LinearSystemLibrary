@@ -8,6 +8,8 @@ add_executable(${PROJECT_NAME} test.cpp)
 
 add_subdirectory(Adder)
 
-target_include_directories(${PROJECT_NAME} PUBLIC Adder )
+add_subdirectory(external/glfw)
+
+target_include_directories(${PROJECT_NAME} PUBLIC Adder)
 
 target_link_libraries(${PROJECT_NAME} adder)
