@@ -63,23 +63,17 @@ CMAKE_BINARY_DIR = /Users/myronphan/LinearSystemLibrary/out/build
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/a.out.dir/all
+all: CMakeFiles/AL.out.dir/all
 all: Adder/all
-all: external/glfw/all
-all: external/glew/build/cmake/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
 preinstall: Adder/preinstall
-preinstall: external/glfw/preinstall
-preinstall: external/glew/build/cmake/preinstall
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/a.out.dir/clean
+clean: CMakeFiles/AL.out.dir/clean
 clean: Adder/clean
-clean: external/glfw/clean
-clean: external/glew/build/cmake/clean
 .PHONY : clean
 
 #=============================================================================
@@ -98,85 +92,30 @@ Adder/clean: Adder/CMakeFiles/adder.dir/clean
 .PHONY : Adder/clean
 
 #=============================================================================
-# Directory level rules for directory external/glew/build/cmake
-
-# Recursive "all" directory target.
-external/glew/build/cmake/all: external/glew/build/cmake/CMakeFiles/glew.dir/all
-external/glew/build/cmake/all: external/glew/build/cmake/CMakeFiles/glew_s.dir/all
-external/glew/build/cmake/all: external/glew/build/cmake/CMakeFiles/glewinfo.dir/all
-external/glew/build/cmake/all: external/glew/build/cmake/CMakeFiles/visualinfo.dir/all
-.PHONY : external/glew/build/cmake/all
-
-# Recursive "preinstall" directory target.
-external/glew/build/cmake/preinstall:
-.PHONY : external/glew/build/cmake/preinstall
-
-# Recursive "clean" directory target.
-external/glew/build/cmake/clean: external/glew/build/cmake/CMakeFiles/glew.dir/clean
-external/glew/build/cmake/clean: external/glew/build/cmake/CMakeFiles/glew_s.dir/clean
-external/glew/build/cmake/clean: external/glew/build/cmake/CMakeFiles/glewinfo.dir/clean
-external/glew/build/cmake/clean: external/glew/build/cmake/CMakeFiles/visualinfo.dir/clean
-.PHONY : external/glew/build/cmake/clean
-
-#=============================================================================
-# Directory level rules for directory external/glfw
-
-# Recursive "all" directory target.
-external/glfw/all: external/glfw/src/all
-.PHONY : external/glfw/all
-
-# Recursive "preinstall" directory target.
-external/glfw/preinstall: external/glfw/src/preinstall
-.PHONY : external/glfw/preinstall
-
-# Recursive "clean" directory target.
-external/glfw/clean: external/glfw/CMakeFiles/uninstall.dir/clean
-external/glfw/clean: external/glfw/src/clean
-.PHONY : external/glfw/clean
-
-#=============================================================================
-# Directory level rules for directory external/glfw/src
-
-# Recursive "all" directory target.
-external/glfw/src/all: external/glfw/src/CMakeFiles/glfw.dir/all
-.PHONY : external/glfw/src/all
-
-# Recursive "preinstall" directory target.
-external/glfw/src/preinstall:
-.PHONY : external/glfw/src/preinstall
-
-# Recursive "clean" directory target.
-external/glfw/src/clean: external/glfw/src/CMakeFiles/update_mappings.dir/clean
-external/glfw/src/clean: external/glfw/src/CMakeFiles/glfw.dir/clean
-.PHONY : external/glfw/src/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/a.out.dir
+# Target rules for target CMakeFiles/AL.out.dir
 
 # All Build rule for target.
-CMakeFiles/a.out.dir/all: Adder/CMakeFiles/adder.dir/all
-CMakeFiles/a.out.dir/all: external/glfw/src/CMakeFiles/glfw.dir/all
-CMakeFiles/a.out.dir/all: external/glew/build/cmake/CMakeFiles/glew_s.dir/all
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/a.out.dir/build.make CMakeFiles/a.out.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/a.out.dir/build.make CMakeFiles/a.out.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles --progress-num=1,2 "Built target a.out"
-.PHONY : CMakeFiles/a.out.dir/all
+CMakeFiles/AL.out.dir/all: Adder/CMakeFiles/adder.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AL.out.dir/build.make CMakeFiles/AL.out.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AL.out.dir/build.make CMakeFiles/AL.out.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles --progress-num=1,2 "Built target AL.out"
+.PHONY : CMakeFiles/AL.out.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/a.out.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles 22
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/a.out.dir/all
+CMakeFiles/AL.out.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles 4
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/AL.out.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles 0
-.PHONY : CMakeFiles/a.out.dir/rule
+.PHONY : CMakeFiles/AL.out.dir/rule
 
 # Convenience name for target.
-a.out: CMakeFiles/a.out.dir/rule
-.PHONY : a.out
+AL.out: CMakeFiles/AL.out.dir/rule
+.PHONY : AL.out
 
 # clean rule for target.
-CMakeFiles/a.out.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/a.out.dir/build.make CMakeFiles/a.out.dir/clean
-.PHONY : CMakeFiles/a.out.dir/clean
+CMakeFiles/AL.out.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AL.out.dir/build.make CMakeFiles/AL.out.dir/clean
+.PHONY : CMakeFiles/AL.out.dir/clean
 
 #=============================================================================
 # Target rules for target Adder/CMakeFiles/adder.dir
@@ -203,188 +142,6 @@ adder: Adder/CMakeFiles/adder.dir/rule
 Adder/CMakeFiles/adder.dir/clean:
 	$(MAKE) $(MAKESILENT) -f Adder/CMakeFiles/adder.dir/build.make Adder/CMakeFiles/adder.dir/clean
 .PHONY : Adder/CMakeFiles/adder.dir/clean
-
-#=============================================================================
-# Target rules for target external/glfw/CMakeFiles/uninstall.dir
-
-# All Build rule for target.
-external/glfw/CMakeFiles/uninstall.dir/all:
-	$(MAKE) $(MAKESILENT) -f external/glfw/CMakeFiles/uninstall.dir/build.make external/glfw/CMakeFiles/uninstall.dir/depend
-	$(MAKE) $(MAKESILENT) -f external/glfw/CMakeFiles/uninstall.dir/build.make external/glfw/CMakeFiles/uninstall.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles --progress-num= "Built target uninstall"
-.PHONY : external/glfw/CMakeFiles/uninstall.dir/all
-
-# Build rule for subdir invocation for target.
-external/glfw/CMakeFiles/uninstall.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles 0
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 external/glfw/CMakeFiles/uninstall.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles 0
-.PHONY : external/glfw/CMakeFiles/uninstall.dir/rule
-
-# Convenience name for target.
-uninstall: external/glfw/CMakeFiles/uninstall.dir/rule
-.PHONY : uninstall
-
-# clean rule for target.
-external/glfw/CMakeFiles/uninstall.dir/clean:
-	$(MAKE) $(MAKESILENT) -f external/glfw/CMakeFiles/uninstall.dir/build.make external/glfw/CMakeFiles/uninstall.dir/clean
-.PHONY : external/glfw/CMakeFiles/uninstall.dir/clean
-
-#=============================================================================
-# Target rules for target external/glfw/src/CMakeFiles/update_mappings.dir
-
-# All Build rule for target.
-external/glfw/src/CMakeFiles/update_mappings.dir/all:
-	$(MAKE) $(MAKESILENT) -f external/glfw/src/CMakeFiles/update_mappings.dir/build.make external/glfw/src/CMakeFiles/update_mappings.dir/depend
-	$(MAKE) $(MAKESILENT) -f external/glfw/src/CMakeFiles/update_mappings.dir/build.make external/glfw/src/CMakeFiles/update_mappings.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles --progress-num=27 "Built target update_mappings"
-.PHONY : external/glfw/src/CMakeFiles/update_mappings.dir/all
-
-# Build rule for subdir invocation for target.
-external/glfw/src/CMakeFiles/update_mappings.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles 1
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 external/glfw/src/CMakeFiles/update_mappings.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles 0
-.PHONY : external/glfw/src/CMakeFiles/update_mappings.dir/rule
-
-# Convenience name for target.
-update_mappings: external/glfw/src/CMakeFiles/update_mappings.dir/rule
-.PHONY : update_mappings
-
-# clean rule for target.
-external/glfw/src/CMakeFiles/update_mappings.dir/clean:
-	$(MAKE) $(MAKESILENT) -f external/glfw/src/CMakeFiles/update_mappings.dir/build.make external/glfw/src/CMakeFiles/update_mappings.dir/clean
-.PHONY : external/glfw/src/CMakeFiles/update_mappings.dir/clean
-
-#=============================================================================
-# Target rules for target external/glfw/src/CMakeFiles/glfw.dir
-
-# All Build rule for target.
-external/glfw/src/CMakeFiles/glfw.dir/all:
-	$(MAKE) $(MAKESILENT) -f external/glfw/src/CMakeFiles/glfw.dir/build.make external/glfw/src/CMakeFiles/glfw.dir/depend
-	$(MAKE) $(MAKESILENT) -f external/glfw/src/CMakeFiles/glfw.dir/build.make external/glfw/src/CMakeFiles/glfw.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles --progress-num=11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26 "Built target glfw"
-.PHONY : external/glfw/src/CMakeFiles/glfw.dir/all
-
-# Build rule for subdir invocation for target.
-external/glfw/src/CMakeFiles/glfw.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles 16
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 external/glfw/src/CMakeFiles/glfw.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles 0
-.PHONY : external/glfw/src/CMakeFiles/glfw.dir/rule
-
-# Convenience name for target.
-glfw: external/glfw/src/CMakeFiles/glfw.dir/rule
-.PHONY : glfw
-
-# clean rule for target.
-external/glfw/src/CMakeFiles/glfw.dir/clean:
-	$(MAKE) $(MAKESILENT) -f external/glfw/src/CMakeFiles/glfw.dir/build.make external/glfw/src/CMakeFiles/glfw.dir/clean
-.PHONY : external/glfw/src/CMakeFiles/glfw.dir/clean
-
-#=============================================================================
-# Target rules for target external/glew/build/cmake/CMakeFiles/glew.dir
-
-# All Build rule for target.
-external/glew/build/cmake/CMakeFiles/glew.dir/all:
-	$(MAKE) $(MAKESILENT) -f external/glew/build/cmake/CMakeFiles/glew.dir/build.make external/glew/build/cmake/CMakeFiles/glew.dir/depend
-	$(MAKE) $(MAKESILENT) -f external/glew/build/cmake/CMakeFiles/glew.dir/build.make external/glew/build/cmake/CMakeFiles/glew.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles --progress-num=5,6 "Built target glew"
-.PHONY : external/glew/build/cmake/CMakeFiles/glew.dir/all
-
-# Build rule for subdir invocation for target.
-external/glew/build/cmake/CMakeFiles/glew.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 external/glew/build/cmake/CMakeFiles/glew.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles 0
-.PHONY : external/glew/build/cmake/CMakeFiles/glew.dir/rule
-
-# Convenience name for target.
-glew: external/glew/build/cmake/CMakeFiles/glew.dir/rule
-.PHONY : glew
-
-# clean rule for target.
-external/glew/build/cmake/CMakeFiles/glew.dir/clean:
-	$(MAKE) $(MAKESILENT) -f external/glew/build/cmake/CMakeFiles/glew.dir/build.make external/glew/build/cmake/CMakeFiles/glew.dir/clean
-.PHONY : external/glew/build/cmake/CMakeFiles/glew.dir/clean
-
-#=============================================================================
-# Target rules for target external/glew/build/cmake/CMakeFiles/glew_s.dir
-
-# All Build rule for target.
-external/glew/build/cmake/CMakeFiles/glew_s.dir/all:
-	$(MAKE) $(MAKESILENT) -f external/glew/build/cmake/CMakeFiles/glew_s.dir/build.make external/glew/build/cmake/CMakeFiles/glew_s.dir/depend
-	$(MAKE) $(MAKESILENT) -f external/glew/build/cmake/CMakeFiles/glew_s.dir/build.make external/glew/build/cmake/CMakeFiles/glew_s.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles --progress-num=7,8 "Built target glew_s"
-.PHONY : external/glew/build/cmake/CMakeFiles/glew_s.dir/all
-
-# Build rule for subdir invocation for target.
-external/glew/build/cmake/CMakeFiles/glew_s.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 external/glew/build/cmake/CMakeFiles/glew_s.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles 0
-.PHONY : external/glew/build/cmake/CMakeFiles/glew_s.dir/rule
-
-# Convenience name for target.
-glew_s: external/glew/build/cmake/CMakeFiles/glew_s.dir/rule
-.PHONY : glew_s
-
-# clean rule for target.
-external/glew/build/cmake/CMakeFiles/glew_s.dir/clean:
-	$(MAKE) $(MAKESILENT) -f external/glew/build/cmake/CMakeFiles/glew_s.dir/build.make external/glew/build/cmake/CMakeFiles/glew_s.dir/clean
-.PHONY : external/glew/build/cmake/CMakeFiles/glew_s.dir/clean
-
-#=============================================================================
-# Target rules for target external/glew/build/cmake/CMakeFiles/glewinfo.dir
-
-# All Build rule for target.
-external/glew/build/cmake/CMakeFiles/glewinfo.dir/all: external/glew/build/cmake/CMakeFiles/glew.dir/all
-	$(MAKE) $(MAKESILENT) -f external/glew/build/cmake/CMakeFiles/glewinfo.dir/build.make external/glew/build/cmake/CMakeFiles/glewinfo.dir/depend
-	$(MAKE) $(MAKESILENT) -f external/glew/build/cmake/CMakeFiles/glewinfo.dir/build.make external/glew/build/cmake/CMakeFiles/glewinfo.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles --progress-num=9,10 "Built target glewinfo"
-.PHONY : external/glew/build/cmake/CMakeFiles/glewinfo.dir/all
-
-# Build rule for subdir invocation for target.
-external/glew/build/cmake/CMakeFiles/glewinfo.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles 4
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 external/glew/build/cmake/CMakeFiles/glewinfo.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles 0
-.PHONY : external/glew/build/cmake/CMakeFiles/glewinfo.dir/rule
-
-# Convenience name for target.
-glewinfo: external/glew/build/cmake/CMakeFiles/glewinfo.dir/rule
-.PHONY : glewinfo
-
-# clean rule for target.
-external/glew/build/cmake/CMakeFiles/glewinfo.dir/clean:
-	$(MAKE) $(MAKESILENT) -f external/glew/build/cmake/CMakeFiles/glewinfo.dir/build.make external/glew/build/cmake/CMakeFiles/glewinfo.dir/clean
-.PHONY : external/glew/build/cmake/CMakeFiles/glewinfo.dir/clean
-
-#=============================================================================
-# Target rules for target external/glew/build/cmake/CMakeFiles/visualinfo.dir
-
-# All Build rule for target.
-external/glew/build/cmake/CMakeFiles/visualinfo.dir/all: external/glew/build/cmake/CMakeFiles/glew.dir/all
-	$(MAKE) $(MAKESILENT) -f external/glew/build/cmake/CMakeFiles/visualinfo.dir/build.make external/glew/build/cmake/CMakeFiles/visualinfo.dir/depend
-	$(MAKE) $(MAKESILENT) -f external/glew/build/cmake/CMakeFiles/visualinfo.dir/build.make external/glew/build/cmake/CMakeFiles/visualinfo.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles --progress-num=28,29 "Built target visualinfo"
-.PHONY : external/glew/build/cmake/CMakeFiles/visualinfo.dir/all
-
-# Build rule for subdir invocation for target.
-external/glew/build/cmake/CMakeFiles/visualinfo.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles 4
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 external/glew/build/cmake/CMakeFiles/visualinfo.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles 0
-.PHONY : external/glew/build/cmake/CMakeFiles/visualinfo.dir/rule
-
-# Convenience name for target.
-visualinfo: external/glew/build/cmake/CMakeFiles/visualinfo.dir/rule
-.PHONY : visualinfo
-
-# clean rule for target.
-external/glew/build/cmake/CMakeFiles/visualinfo.dir/clean:
-	$(MAKE) $(MAKESILENT) -f external/glew/build/cmake/CMakeFiles/visualinfo.dir/build.make external/glew/build/cmake/CMakeFiles/visualinfo.dir/clean
-.PHONY : external/glew/build/cmake/CMakeFiles/visualinfo.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

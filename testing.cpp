@@ -4,6 +4,8 @@
 #include <fstream>
 #include <string> 
 #include <sstream>
+#include <cassert>
+#include "Renderer.h"
 
 struct ShaderProgramSource {
     std::string VertexSource;
@@ -61,21 +63,21 @@ static unsigned int CompileShader(unsigned int type, const std::string& source) 
 
 static unsigned int CreateShader(const std::string& vertexShader, const std::string& fragmentShader) {
     // combine vertex and fragment shaders into one program
-    unsigned int program = glCreateProgram();
+    GLCall(unsigned int program = glCreateProgram());
 
     // compile
     unsigned int vs = CompileShader(GL_VERTEX_SHADER, vertexShader);
     unsigned int fs = CompileShader(GL_FRAGMENT_SHADER, fragmentShader);
 
     // link
-    glAttachShader(program, vs);
-    glAttachShader(program, fs);
-    glLinkProgram(program);
-    glValidateProgram(program);
+    GLCall(glAttachShader(program, vs));
+    GLCall(glAttachShader(program, fs));
+    GLCall(glLinkProgram(program));
+    GLCall(glValidateProgram(program));
 
     // free memory
-    glDeleteShader(vs);
-    glDeleteShader(fs);
+    GLCall(glDeleteShader(vs));
+    GLCall(glDeleteShader(fs));
 
     return program; 
 }
@@ -108,28 +110,37 @@ int main(void)
 
     std::cout << glGetString(GL_VERSION) <<std::endl;
 
-    float positions[6] = {
-        -0.5f,-0.5f,
-         0.0f, 0.5f,
-         0.5f,-0.5f
+    float positions[] = {
+        -0.5f, -0.5f,
+         0.5f, -0.5f,
+         0.5f,  0.5f,
+        -0.5f,  0.5f
+    };
+
+    unsigned int indices[] = {
+        0,1,2,
+        3,2,0
     };
 
     // vertex array object : will store the vbo inside them
     unsigned int vao;
-    glGenVertexArrays(1,&vao);
-    glBindVertexArray(vao);
+    GLCall(glGenVertexArrays(1,&vao));
+    GLCall(glBindVertexArray(vao));
 
     // create a buffer of data, bind it (enable it) and specify the data as input and what to do with it (draw a triangle)
-    unsigned int buffer;
-    glGenBuffers(1, &buffer);
-    glBindBuffer(GL_ARRAY_BUFFER,buffer);
-    glBufferData(GL_ARRAY_BUFFER,6*sizeof(float),positions,GL_STATIC_DRAW);
+    unsigned int buffer; // create id for buffer
+    GLCall(glGenBuffers(1, &buffer));   // generate buffer and assign id to variable, buffer
+    GLCall(glBindBuffer(GL_ARRAY_BUFFER,buffer));   // assign what type of buffer to the newly generated buffer
+    GLCall(glBufferData(GL_ARRAY_BUFFER,4*2*sizeof(float),positions,GL_STATIC_DRAW));   // tell the GPU what kind of buffer to send the data to, and the function of it
 
     // specify structure and data
-    glEnableVertexAttribArray(0); // turn on vertex attribute array
-    glVertexAttribPointer(0,2,GL_FLOAT,GL_FALSE,2*sizeof(float),0); // specify how that data is retrieved, how else is openGL supposed to know the structure?
+    GLCall(glEnableVertexAttribArray(0)); // turn on vertex attribute array
+    GLCall(glVertexAttribPointer(0,2,GL_FLOAT,GL_FALSE,2*sizeof(float),0)); // specify how that data is retrieved, how else is openGL supposed to know the structure?
 
-    glBindBuffer(GL_ARRAY_BUFFER,0);
+    unsigned int ibo;
+    GLCall(glGenBuffers(1, &ibo));
+    GLCall(glBindBuffer(GL_ELEMENT_ARRAY_BUFFER,ibo));
+    GLCall(glBufferData(GL_ELEMENT_ARRAY_BUFFER,6*sizeof(unsigned int),indices,GL_STATIC_DRAW));
 
 
     // compile/link shaders and use them
@@ -138,22 +149,39 @@ int main(void)
     std::cout << shaders.VertexSource << std::endl;
     std::cout << "frag" << std::endl;
     std::cout << shaders.FragmentSource << std::endl;
-    unsigned int shader = CreateShader(shaders.VertexSource, shaders.FragmentSource);
-    glUseProgram(shader);
+    GLCall(unsigned int shader = CreateShader(shaders.VertexSource, shaders.FragmentSource));
+    GLCall(glUseProgram(shader));
+
+    GLCall(int location = glGetUniformLocation(shader, "u_Color"));
+    assert(location != -1);
+    GLCall(glUniform4f(location,0.2f,0.3f,0.8f,1.0f));
+    float r = 0.0f;
+    float increment = 0.05f;
 
     /* Loop until the user closes the window */
     while (!glfwWindowShouldClose(window))
     {
         /* Render here */
-        glClear(GL_COLOR_BUFFER_BIT);
+        GLCall(glClear(GL_COLOR_BUFFER_BIT));
 
-        glDrawArrays(GL_TRIANGLES,0,3);
+        glPolygonMode(GL_FRONT_AND_BACK,GL_LINE);
+        GLCall(glUniform4f(location,r,0.3f,0.8f,1.0f));
+        GLCall(glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, nullptr));
+        
+        if (r > 1.0) {
+            increment = -0.05f;
+        }
+        else if ( r < 0.0f) {
+            increment = 0.05f;
+        }
+
+        r = r + increment;
 
         /* Swap front and back buffers */
-        glfwSwapBuffers(window);
+        GLCall(glfwSwapBuffers(window));
 
         /* Poll for and process events */
-        glfwPollEvents();
+        GLCall(glfwPollEvents());
     }
 
     glfwTerminate();

@@ -69,32 +69,32 @@ include CMakeFiles/a.out.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/a.out.dir/flags.make
 
-CMakeFiles/a.out.dir/testing.cpp.o: CMakeFiles/a.out.dir/flags.make
-CMakeFiles/a.out.dir/testing.cpp.o: ../../testing.cpp
-CMakeFiles/a.out.dir/testing.cpp.o: CMakeFiles/a.out.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/a.out.dir/testing.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/a.out.dir/testing.cpp.o -MF CMakeFiles/a.out.dir/testing.cpp.o.d -o CMakeFiles/a.out.dir/testing.cpp.o -c /Users/myronphan/LinearSystemLibrary/testing.cpp
+CMakeFiles/a.out.dir/test.cpp.o: CMakeFiles/a.out.dir/flags.make
+CMakeFiles/a.out.dir/test.cpp.o: ../../test.cpp
+CMakeFiles/a.out.dir/test.cpp.o: CMakeFiles/a.out.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/a.out.dir/test.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/a.out.dir/test.cpp.o -MF CMakeFiles/a.out.dir/test.cpp.o.d -o CMakeFiles/a.out.dir/test.cpp.o -c /Users/myronphan/LinearSystemLibrary/test.cpp
 
-CMakeFiles/a.out.dir/testing.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/a.out.dir/testing.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/myronphan/LinearSystemLibrary/testing.cpp > CMakeFiles/a.out.dir/testing.cpp.i
+CMakeFiles/a.out.dir/test.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/a.out.dir/test.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/myronphan/LinearSystemLibrary/test.cpp > CMakeFiles/a.out.dir/test.cpp.i
 
-CMakeFiles/a.out.dir/testing.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/a.out.dir/testing.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/myronphan/LinearSystemLibrary/testing.cpp -o CMakeFiles/a.out.dir/testing.cpp.s
+CMakeFiles/a.out.dir/test.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/a.out.dir/test.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/myronphan/LinearSystemLibrary/test.cpp -o CMakeFiles/a.out.dir/test.cpp.s
 
 # Object files for target a.out
 a_out_OBJECTS = \
-"CMakeFiles/a.out.dir/testing.cpp.o"
+"CMakeFiles/a.out.dir/test.cpp.o"
 
 # External object files for target a.out
 a_out_EXTERNAL_OBJECTS =
 
-a.out: CMakeFiles/a.out.dir/testing.cpp.o
+a.out: CMakeFiles/a.out.dir/test.cpp.o
 a.out: CMakeFiles/a.out.dir/build.make
 a.out: Adder/libadder.a
 a.out: external/glfw/src/libglfw3.a
-a.out: lib/libGLEW.a
+a.out: lib/libGLEW.2.1.0.dylib
 a.out: CMakeFiles/a.out.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable a.out"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/a.out.dir/link.txt --verbose=$(VERBOSE)
