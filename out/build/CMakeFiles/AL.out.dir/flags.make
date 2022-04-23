@@ -4,7 +4,7 @@
 # compile CXX with /Library/Developer/CommandLineTools/usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/Users/myronphan/LinearSystemLibrary/Adder
+CXX_INCLUDES = -I/Users/myronphan/LinearSystemLibrary/Adder -I/Users/myronphan/LinearSystemLibrary/external/glfw/include/GLFW
 
 CXX_FLAGSx86_64 =  -arch x86_64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -std=gnu++14
 

@@ -10,6 +10,6 @@ add_subdirectory(Adder)
 
 add_subdirectory(external/glfw)
 
-target_include_directories(${PROJECT_NAME} PUBLIC Adder)
+target_include_directories(${PROJECT_NAME} PUBLIC Adder PUBLIC external/glfw/include/GLFW)
 
 target_link_libraries(${PROJECT_NAME} adder)
