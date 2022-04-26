@@ -1,5 +1,5 @@
 #pragma once
-
+#include <glew.h>
 #define GLCall(x);\
         x;\
         GLLogCall(#x,__FILE__,__LINE__)

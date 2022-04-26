@@ -162,17 +162,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named AL.out
+# Target rules for targets named a.out
 
 # Build rule for target.
-AL.out: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 AL.out
-.PHONY : AL.out
+a.out: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 a.out
+.PHONY : a.out
 
 # fast build rule for target.
-AL.out/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/AL.out.dir/build.make CMakeFiles/AL.out.dir/build
-.PHONY : AL.out/fast
+a.out/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/a.out.dir/build.make CMakeFiles/a.out.dir/build
+.PHONY : a.out/fast
 
 #=============================================================================
 # Target rules for targets named adder
@@ -603,29 +603,177 @@ windows/fast:
 	$(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/windows.dir/build.make external/glfw/tests/CMakeFiles/windows.dir/build
 .PHONY : windows/fast
 
-test.o: test.cpp.o
-.PHONY : test.o
+#=============================================================================
+# Target rules for targets named glew
+
+# Build rule for target.
+glew: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 glew
+.PHONY : glew
+
+# fast build rule for target.
+glew/fast:
+	$(MAKE) $(MAKESILENT) -f external/glew/build/cmake/CMakeFiles/glew.dir/build.make external/glew/build/cmake/CMakeFiles/glew.dir/build
+.PHONY : glew/fast
+
+#=============================================================================
+# Target rules for targets named glew_s
+
+# Build rule for target.
+glew_s: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 glew_s
+.PHONY : glew_s
+
+# fast build rule for target.
+glew_s/fast:
+	$(MAKE) $(MAKESILENT) -f external/glew/build/cmake/CMakeFiles/glew_s.dir/build.make external/glew/build/cmake/CMakeFiles/glew_s.dir/build
+.PHONY : glew_s/fast
+
+#=============================================================================
+# Target rules for targets named glewinfo
+
+# Build rule for target.
+glewinfo: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 glewinfo
+.PHONY : glewinfo
+
+# fast build rule for target.
+glewinfo/fast:
+	$(MAKE) $(MAKESILENT) -f external/glew/build/cmake/CMakeFiles/glewinfo.dir/build.make external/glew/build/cmake/CMakeFiles/glewinfo.dir/build
+.PHONY : glewinfo/fast
+
+#=============================================================================
+# Target rules for targets named visualinfo
+
+# Build rule for target.
+visualinfo: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 visualinfo
+.PHONY : visualinfo
+
+# fast build rule for target.
+visualinfo/fast:
+	$(MAKE) $(MAKESILENT) -f external/glew/build/cmake/CMakeFiles/visualinfo.dir/build.make external/glew/build/cmake/CMakeFiles/visualinfo.dir/build
+.PHONY : visualinfo/fast
+
+IndexBuffer.o: IndexBuffer.cpp.o
+.PHONY : IndexBuffer.o
 
 # target to build an object file
-test.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/AL.out.dir/build.make CMakeFiles/AL.out.dir/test.cpp.o
-.PHONY : test.cpp.o
+IndexBuffer.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/a.out.dir/build.make CMakeFiles/a.out.dir/IndexBuffer.cpp.o
+.PHONY : IndexBuffer.cpp.o
 
-test.i: test.cpp.i
-.PHONY : test.i
+IndexBuffer.i: IndexBuffer.cpp.i
+.PHONY : IndexBuffer.i
 
 # target to preprocess a source file
-test.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/AL.out.dir/build.make CMakeFiles/AL.out.dir/test.cpp.i
-.PHONY : test.cpp.i
+IndexBuffer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/a.out.dir/build.make CMakeFiles/a.out.dir/IndexBuffer.cpp.i
+.PHONY : IndexBuffer.cpp.i
 
-test.s: test.cpp.s
-.PHONY : test.s
+IndexBuffer.s: IndexBuffer.cpp.s
+.PHONY : IndexBuffer.s
 
 # target to generate assembly for a file
-test.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/AL.out.dir/build.make CMakeFiles/AL.out.dir/test.cpp.s
-.PHONY : test.cpp.s
+IndexBuffer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/a.out.dir/build.make CMakeFiles/a.out.dir/IndexBuffer.cpp.s
+.PHONY : IndexBuffer.cpp.s
+
+Renderer.o: Renderer.cpp.o
+.PHONY : Renderer.o
+
+# target to build an object file
+Renderer.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/a.out.dir/build.make CMakeFiles/a.out.dir/Renderer.cpp.o
+.PHONY : Renderer.cpp.o
+
+Renderer.i: Renderer.cpp.i
+.PHONY : Renderer.i
+
+# target to preprocess a source file
+Renderer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/a.out.dir/build.make CMakeFiles/a.out.dir/Renderer.cpp.i
+.PHONY : Renderer.cpp.i
+
+Renderer.s: Renderer.cpp.s
+.PHONY : Renderer.s
+
+# target to generate assembly for a file
+Renderer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/a.out.dir/build.make CMakeFiles/a.out.dir/Renderer.cpp.s
+.PHONY : Renderer.cpp.s
+
+Vertex.o: Vertex.cpp.o
+.PHONY : Vertex.o
+
+# target to build an object file
+Vertex.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/a.out.dir/build.make CMakeFiles/a.out.dir/Vertex.cpp.o
+.PHONY : Vertex.cpp.o
+
+Vertex.i: Vertex.cpp.i
+.PHONY : Vertex.i
+
+# target to preprocess a source file
+Vertex.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/a.out.dir/build.make CMakeFiles/a.out.dir/Vertex.cpp.i
+.PHONY : Vertex.cpp.i
+
+Vertex.s: Vertex.cpp.s
+.PHONY : Vertex.s
+
+# target to generate assembly for a file
+Vertex.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/a.out.dir/build.make CMakeFiles/a.out.dir/Vertex.cpp.s
+.PHONY : Vertex.cpp.s
+
+VertexArray.o: VertexArray.cpp.o
+.PHONY : VertexArray.o
+
+# target to build an object file
+VertexArray.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/a.out.dir/build.make CMakeFiles/a.out.dir/VertexArray.cpp.o
+.PHONY : VertexArray.cpp.o
+
+VertexArray.i: VertexArray.cpp.i
+.PHONY : VertexArray.i
+
+# target to preprocess a source file
+VertexArray.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/a.out.dir/build.make CMakeFiles/a.out.dir/VertexArray.cpp.i
+.PHONY : VertexArray.cpp.i
+
+VertexArray.s: VertexArray.cpp.s
+.PHONY : VertexArray.s
+
+# target to generate assembly for a file
+VertexArray.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/a.out.dir/build.make CMakeFiles/a.out.dir/VertexArray.cpp.s
+.PHONY : VertexArray.cpp.s
+
+testing.o: testing.cpp.o
+.PHONY : testing.o
+
+# target to build an object file
+testing.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/a.out.dir/build.make CMakeFiles/a.out.dir/testing.cpp.o
+.PHONY : testing.cpp.o
+
+testing.i: testing.cpp.i
+.PHONY : testing.i
+
+# target to preprocess a source file
+testing.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/a.out.dir/build.make CMakeFiles/a.out.dir/testing.cpp.i
+.PHONY : testing.cpp.i
+
+testing.s: testing.cpp.s
+.PHONY : testing.s
+
+# target to generate assembly for a file
+testing.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/a.out.dir/build.make CMakeFiles/a.out.dir/testing.cpp.s
+.PHONY : testing.cpp.s
 
 # Help Target
 help:
@@ -641,7 +789,7 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... uninstall"
 	@echo "... update_mappings"
-	@echo "... AL.out"
+	@echo "... a.out"
 	@echo "... adder"
 	@echo "... boing"
 	@echo "... clipboard"
@@ -650,6 +798,9 @@ help:
 	@echo "... events"
 	@echo "... gamma"
 	@echo "... gears"
+	@echo "... glew"
+	@echo "... glew_s"
+	@echo "... glewinfo"
 	@echo "... glfw"
 	@echo "... glfwinfo"
 	@echo "... heightmap"
@@ -671,11 +822,24 @@ help:
 	@echo "... timeout"
 	@echo "... title"
 	@echo "... triangle-vulkan"
+	@echo "... visualinfo"
 	@echo "... wave"
 	@echo "... windows"
-	@echo "... test.o"
-	@echo "... test.i"
-	@echo "... test.s"
+	@echo "... IndexBuffer.o"
+	@echo "... IndexBuffer.i"
+	@echo "... IndexBuffer.s"
+	@echo "... Renderer.o"
+	@echo "... Renderer.i"
+	@echo "... Renderer.s"
+	@echo "... Vertex.o"
+	@echo "... Vertex.i"
+	@echo "... Vertex.s"
+	@echo "... VertexArray.o"
+	@echo "... VertexArray.i"
+	@echo "... VertexArray.s"
+	@echo "... testing.o"
+	@echo "... testing.i"
+	@echo "... testing.s"
 .PHONY : help
 
 

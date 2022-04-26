@@ -238,4 +238,9 @@ CMakeFiles/a.out.dir/testing.cpp.o: \
   /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/__split_buffer \
   /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/iomanip \
   /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/sstream \
-  /Users/myronphan/LinearSystemLibrary/Renderer.h
+  /Users/myronphan/LinearSystemLibrary/Renderer.h \
+  /Users/myronphan/LinearSystemLibrary/IndexBuffer.h \
+  /Users/myronphan/LinearSystemLibrary/Vertex.h \
+  /Users/myronphan/LinearSystemLibrary/VertexArray.h \
+  /Users/myronphan/LinearSystemLibrary/VertexBufferLayout.h \
+  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/vector

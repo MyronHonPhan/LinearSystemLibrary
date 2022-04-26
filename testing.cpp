@@ -1,11 +1,14 @@
 #include <iostream>
-#include <GL/glew.h>
-#include <GLFW/glfw3.h>
+#include <glew.h>
+#include <glfw3.h>
 #include <fstream>
 #include <string> 
 #include <sstream>
 #include <cassert>
 #include "Renderer.h"
+#include "IndexBuffer.h"
+#include "Vertex.h"
+#include "VertexArray.h"
 
 struct ShaderProgramSource {
     std::string VertexSource;
@@ -122,39 +125,21 @@ int main(void)
         3,2,0
     };
 
-    // vertex array object : will store the vbo inside them
-    unsigned int vao;
-    GLCall(glGenVertexArrays(1,&vao));
-    GLCall(glBindVertexArray(vao));
+    VertexArray va;                                 // vertex array object : will store the vbo inside them
+    VertexBuffer vb(positions, 4*2*sizeof(float));  // generate a buffer of data, bind it to the context and specify the data to send to the vertex buffer
+    VertexBufferLayout layout;                      
+    layout.Push<float>(2);                          // gathers information for VertexAttribPointer (data type, vector size, stride and normalization)
+    va.AddBuffer(vb, layout);                       // applies and enables VertexAttribPointer (links the vbo and the vao together)
+    IndexBuffer ib(indices, 6);                     // does the index buffer array stuff
 
-    // create a buffer of data, bind it (enable it) and specify the data as input and what to do with it (draw a triangle)
-    unsigned int buffer; // create id for buffer
-    GLCall(glGenBuffers(1, &buffer));   // generate buffer and assign id to variable, buffer
-    GLCall(glBindBuffer(GL_ARRAY_BUFFER,buffer));   // assign what type of buffer to the newly generated buffer
-    GLCall(glBufferData(GL_ARRAY_BUFFER,4*2*sizeof(float),positions,GL_STATIC_DRAW));   // tell the GPU what kind of buffer to send the data to, and the function of it
-
-    // specify structure and data
-    GLCall(glEnableVertexAttribArray(0)); // turn on vertex attribute array
-    GLCall(glVertexAttribPointer(0,2,GL_FLOAT,GL_FALSE,2*sizeof(float),0)); // specify how that data is retrieved, how else is openGL supposed to know the structure?
-
-    unsigned int ibo;
-    GLCall(glGenBuffers(1, &ibo));
-    GLCall(glBindBuffer(GL_ELEMENT_ARRAY_BUFFER,ibo));
-    GLCall(glBufferData(GL_ELEMENT_ARRAY_BUFFER,6*sizeof(unsigned int),indices,GL_STATIC_DRAW));
-
-
-    // compile/link shaders and use them
+    // compile and link shaders
     ShaderProgramSource shaders = ParseShader("/Users/myronphan/LinearSystemLibrary/res/shaders/basic.shader");
-    std::cout << "VERTEX" << std::endl;
-    std::cout << shaders.VertexSource << std::endl;
-    std::cout << "frag" << std::endl;
-    std::cout << shaders.FragmentSource << std::endl;
+    
     GLCall(unsigned int shader = CreateShader(shaders.VertexSource, shaders.FragmentSource));
     GLCall(glUseProgram(shader));
 
     GLCall(int location = glGetUniformLocation(shader, "u_Color"));
     assert(location != -1);
-    GLCall(glUniform4f(location,0.2f,0.3f,0.8f,1.0f));
     float r = 0.0f;
     float increment = 0.05f;
 
@@ -164,8 +149,9 @@ int main(void)
         /* Render here */
         GLCall(glClear(GL_COLOR_BUFFER_BIT));
 
-        glPolygonMode(GL_FRONT_AND_BACK,GL_LINE);
         GLCall(glUniform4f(location,r,0.3f,0.8f,1.0f));
+        va.Bind();
+        ib.Bind();
         GLCall(glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, nullptr));
         
         if (r > 1.0) {

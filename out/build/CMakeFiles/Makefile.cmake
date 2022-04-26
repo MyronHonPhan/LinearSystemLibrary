@@ -9,6 +9,8 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeCache.txt"
   "../../Adder/CMakeLists.txt"
   "../../CMakeLists.txt"
+  "../../external/glew/build/cmake/CMakeLists.txt"
+  "../../external/glew/glew.pc.in"
   "../../external/glfw/CMake/MacOSXBundleInfo.plist.in"
   "../../external/glfw/CMakeLists.txt"
   "../../external/glfw/cmake_uninstall.cmake.in"
@@ -41,6 +43,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/opt/homebrew/Cellar/cmake/3.22.2/share/cmake/Modules/Compiler/Clang.cmake"
   "/opt/homebrew/Cellar/cmake/3.22.2/share/cmake/Modules/Compiler/GNU.cmake"
   "/opt/homebrew/Cellar/cmake/3.22.2/share/cmake/Modules/FindDoxygen.cmake"
+  "/opt/homebrew/Cellar/cmake/3.22.2/share/cmake/Modules/FindOpenGL.cmake"
   "/opt/homebrew/Cellar/cmake/3.22.2/share/cmake/Modules/FindPackageHandleStandardArgs.cmake"
   "/opt/homebrew/Cellar/cmake/3.22.2/share/cmake/Modules/FindPackageMessage.cmake"
   "/opt/homebrew/Cellar/cmake/3.22.2/share/cmake/Modules/FindThreads.cmake"
@@ -133,11 +136,13 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "external/glfw/tests/windows.app/Contents/Info.plist"
   "external/glfw/tests/windows.app/Contents/Info.plist"
   "external/glfw/tests/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "../../external/glew/glew.pc"
+  "external/glew/build/cmake/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "CMakeFiles/AL.out.dir/DependInfo.cmake"
+  "CMakeFiles/a.out.dir/DependInfo.cmake"
   "Adder/CMakeFiles/adder.dir/DependInfo.cmake"
   "external/glfw/CMakeFiles/uninstall.dir/DependInfo.cmake"
   "external/glfw/src/CMakeFiles/update_mappings.dir/DependInfo.cmake"
@@ -171,4 +176,8 @@ set(CMAKE_DEPEND_INFO_FILES
   "external/glfw/tests/CMakeFiles/title.dir/DependInfo.cmake"
   "external/glfw/tests/CMakeFiles/triangle-vulkan.dir/DependInfo.cmake"
   "external/glfw/tests/CMakeFiles/windows.dir/DependInfo.cmake"
+  "external/glew/build/cmake/CMakeFiles/glew.dir/DependInfo.cmake"
+  "external/glew/build/cmake/CMakeFiles/glew_s.dir/DependInfo.cmake"
+  "external/glew/build/cmake/CMakeFiles/glewinfo.dir/DependInfo.cmake"
+  "external/glew/build/cmake/CMakeFiles/visualinfo.dir/DependInfo.cmake"
   )

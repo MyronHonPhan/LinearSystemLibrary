@@ -69,34 +69,98 @@ include CMakeFiles/a.out.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/a.out.dir/flags.make
 
-CMakeFiles/a.out.dir/test.cpp.o: CMakeFiles/a.out.dir/flags.make
-CMakeFiles/a.out.dir/test.cpp.o: ../../test.cpp
-CMakeFiles/a.out.dir/test.cpp.o: CMakeFiles/a.out.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/a.out.dir/test.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/a.out.dir/test.cpp.o -MF CMakeFiles/a.out.dir/test.cpp.o.d -o CMakeFiles/a.out.dir/test.cpp.o -c /Users/myronphan/LinearSystemLibrary/test.cpp
+CMakeFiles/a.out.dir/testing.cpp.o: CMakeFiles/a.out.dir/flags.make
+CMakeFiles/a.out.dir/testing.cpp.o: ../../testing.cpp
+CMakeFiles/a.out.dir/testing.cpp.o: CMakeFiles/a.out.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/a.out.dir/testing.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/a.out.dir/testing.cpp.o -MF CMakeFiles/a.out.dir/testing.cpp.o.d -o CMakeFiles/a.out.dir/testing.cpp.o -c /Users/myronphan/LinearSystemLibrary/testing.cpp
 
-CMakeFiles/a.out.dir/test.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/a.out.dir/test.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/myronphan/LinearSystemLibrary/test.cpp > CMakeFiles/a.out.dir/test.cpp.i
+CMakeFiles/a.out.dir/testing.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/a.out.dir/testing.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/myronphan/LinearSystemLibrary/testing.cpp > CMakeFiles/a.out.dir/testing.cpp.i
 
-CMakeFiles/a.out.dir/test.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/a.out.dir/test.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/myronphan/LinearSystemLibrary/test.cpp -o CMakeFiles/a.out.dir/test.cpp.s
+CMakeFiles/a.out.dir/testing.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/a.out.dir/testing.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/myronphan/LinearSystemLibrary/testing.cpp -o CMakeFiles/a.out.dir/testing.cpp.s
+
+CMakeFiles/a.out.dir/Renderer.cpp.o: CMakeFiles/a.out.dir/flags.make
+CMakeFiles/a.out.dir/Renderer.cpp.o: ../../Renderer.cpp
+CMakeFiles/a.out.dir/Renderer.cpp.o: CMakeFiles/a.out.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/a.out.dir/Renderer.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/a.out.dir/Renderer.cpp.o -MF CMakeFiles/a.out.dir/Renderer.cpp.o.d -o CMakeFiles/a.out.dir/Renderer.cpp.o -c /Users/myronphan/LinearSystemLibrary/Renderer.cpp
+
+CMakeFiles/a.out.dir/Renderer.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/a.out.dir/Renderer.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/myronphan/LinearSystemLibrary/Renderer.cpp > CMakeFiles/a.out.dir/Renderer.cpp.i
+
+CMakeFiles/a.out.dir/Renderer.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/a.out.dir/Renderer.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/myronphan/LinearSystemLibrary/Renderer.cpp -o CMakeFiles/a.out.dir/Renderer.cpp.s
+
+CMakeFiles/a.out.dir/Vertex.cpp.o: CMakeFiles/a.out.dir/flags.make
+CMakeFiles/a.out.dir/Vertex.cpp.o: ../../Vertex.cpp
+CMakeFiles/a.out.dir/Vertex.cpp.o: CMakeFiles/a.out.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/a.out.dir/Vertex.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/a.out.dir/Vertex.cpp.o -MF CMakeFiles/a.out.dir/Vertex.cpp.o.d -o CMakeFiles/a.out.dir/Vertex.cpp.o -c /Users/myronphan/LinearSystemLibrary/Vertex.cpp
+
+CMakeFiles/a.out.dir/Vertex.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/a.out.dir/Vertex.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/myronphan/LinearSystemLibrary/Vertex.cpp > CMakeFiles/a.out.dir/Vertex.cpp.i
+
+CMakeFiles/a.out.dir/Vertex.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/a.out.dir/Vertex.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/myronphan/LinearSystemLibrary/Vertex.cpp -o CMakeFiles/a.out.dir/Vertex.cpp.s
+
+CMakeFiles/a.out.dir/IndexBuffer.cpp.o: CMakeFiles/a.out.dir/flags.make
+CMakeFiles/a.out.dir/IndexBuffer.cpp.o: ../../IndexBuffer.cpp
+CMakeFiles/a.out.dir/IndexBuffer.cpp.o: CMakeFiles/a.out.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/a.out.dir/IndexBuffer.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/a.out.dir/IndexBuffer.cpp.o -MF CMakeFiles/a.out.dir/IndexBuffer.cpp.o.d -o CMakeFiles/a.out.dir/IndexBuffer.cpp.o -c /Users/myronphan/LinearSystemLibrary/IndexBuffer.cpp
+
+CMakeFiles/a.out.dir/IndexBuffer.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/a.out.dir/IndexBuffer.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/myronphan/LinearSystemLibrary/IndexBuffer.cpp > CMakeFiles/a.out.dir/IndexBuffer.cpp.i
+
+CMakeFiles/a.out.dir/IndexBuffer.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/a.out.dir/IndexBuffer.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/myronphan/LinearSystemLibrary/IndexBuffer.cpp -o CMakeFiles/a.out.dir/IndexBuffer.cpp.s
+
+CMakeFiles/a.out.dir/VertexArray.cpp.o: CMakeFiles/a.out.dir/flags.make
+CMakeFiles/a.out.dir/VertexArray.cpp.o: ../../VertexArray.cpp
+CMakeFiles/a.out.dir/VertexArray.cpp.o: CMakeFiles/a.out.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/a.out.dir/VertexArray.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/a.out.dir/VertexArray.cpp.o -MF CMakeFiles/a.out.dir/VertexArray.cpp.o.d -o CMakeFiles/a.out.dir/VertexArray.cpp.o -c /Users/myronphan/LinearSystemLibrary/VertexArray.cpp
+
+CMakeFiles/a.out.dir/VertexArray.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/a.out.dir/VertexArray.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/myronphan/LinearSystemLibrary/VertexArray.cpp > CMakeFiles/a.out.dir/VertexArray.cpp.i
+
+CMakeFiles/a.out.dir/VertexArray.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/a.out.dir/VertexArray.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/myronphan/LinearSystemLibrary/VertexArray.cpp -o CMakeFiles/a.out.dir/VertexArray.cpp.s
 
 # Object files for target a.out
 a_out_OBJECTS = \
-"CMakeFiles/a.out.dir/test.cpp.o"
+"CMakeFiles/a.out.dir/testing.cpp.o" \
+"CMakeFiles/a.out.dir/Renderer.cpp.o" \
+"CMakeFiles/a.out.dir/Vertex.cpp.o" \
+"CMakeFiles/a.out.dir/IndexBuffer.cpp.o" \
+"CMakeFiles/a.out.dir/VertexArray.cpp.o"
 
 # External object files for target a.out
 a_out_EXTERNAL_OBJECTS =
 
-a.out: CMakeFiles/a.out.dir/test.cpp.o
+a.out: CMakeFiles/a.out.dir/testing.cpp.o
+a.out: CMakeFiles/a.out.dir/Renderer.cpp.o
+a.out: CMakeFiles/a.out.dir/Vertex.cpp.o
+a.out: CMakeFiles/a.out.dir/IndexBuffer.cpp.o
+a.out: CMakeFiles/a.out.dir/VertexArray.cpp.o
 a.out: CMakeFiles/a.out.dir/build.make
 a.out: Adder/libadder.a
 a.out: external/glfw/src/libglfw3.a
-a.out: lib/libGLEW.2.1.0.dylib
+a.out: lib/libGLEW.a
 a.out: CMakeFiles/a.out.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable a.out"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable a.out"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/a.out.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
