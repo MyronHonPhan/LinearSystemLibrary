@@ -52,7 +52,7 @@ external/glew/build/cmake/CMakeFiles/glewinfo.dir/__/__/src/glewinfo.c.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/usr/include/sys/_types/_sigset_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/usr/include/sys/_types/_uid_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/usr/include/sys/resource.h \
-  /Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include/stdint.h \
+  /Library/Developer/CommandLineTools/usr/lib/clang/12.0.5/include/stdint.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/usr/include/stdint.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/usr/include/_types/_uint8_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/usr/include/_types/_uint16_t.h \
@@ -80,8 +80,8 @@ external/glew/build/cmake/CMakeFiles/glewinfo.dir/__/__/src/glewinfo.c.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/usr/include/secure/_strings.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/usr/include/secure/_string.h \
   /Users/myronphan/LinearSystemLibrary/external/glew/build/cmake/../../include/GL/glew.h \
-  /Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include/stddef.h \
-  /Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include/__stddef_max_align_t.h \
+  /Library/Developer/CommandLineTools/usr/lib/clang/12.0.5/include/stddef.h \
+  /Library/Developer/CommandLineTools/usr/lib/clang/12.0.5/include/__stddef_max_align_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/usr/include/AvailabilityMacros.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/System/Library/Frameworks/OpenGL.framework/Headers/OpenGL.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/System/Library/Frameworks/OpenGL.framework/Headers/OpenGLAvailability.h \

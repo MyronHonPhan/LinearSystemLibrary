@@ -45,10 +45,10 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /opt/homebrew/Cellar/cmake/3.22.2/bin/cmake
+CMAKE_COMMAND = /usr/local/Cellar/cmake/3.22.2/bin/cmake
 
 # The command to remove a file.
-RM = /opt/homebrew/Cellar/cmake/3.22.2/bin/cmake -E rm -f
+RM = /usr/local/Cellar/cmake/3.22.2/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
@@ -150,9 +150,11 @@ external/glfw/examples/all: external/glfw/examples/CMakeFiles/heightmap.dir/all
 external/glfw/examples/all: external/glfw/examples/CMakeFiles/offscreen.dir/all
 external/glfw/examples/all: external/glfw/examples/CMakeFiles/particles.dir/all
 external/glfw/examples/all: external/glfw/examples/CMakeFiles/sharing.dir/all
-external/glfw/examples/all: external/glfw/examples/CMakeFiles/simple.dir/all
 external/glfw/examples/all: external/glfw/examples/CMakeFiles/splitview.dir/all
+external/glfw/examples/all: external/glfw/examples/CMakeFiles/triangle-opengl.dir/all
+external/glfw/examples/all: external/glfw/examples/CMakeFiles/triangle-opengles.dir/all
 external/glfw/examples/all: external/glfw/examples/CMakeFiles/wave.dir/all
+external/glfw/examples/all: external/glfw/examples/CMakeFiles/windows.dir/all
 .PHONY : external/glfw/examples/all
 
 # Recursive "preinstall" directory target.
@@ -166,9 +168,11 @@ external/glfw/examples/clean: external/glfw/examples/CMakeFiles/heightmap.dir/cl
 external/glfw/examples/clean: external/glfw/examples/CMakeFiles/offscreen.dir/clean
 external/glfw/examples/clean: external/glfw/examples/CMakeFiles/particles.dir/clean
 external/glfw/examples/clean: external/glfw/examples/CMakeFiles/sharing.dir/clean
-external/glfw/examples/clean: external/glfw/examples/CMakeFiles/simple.dir/clean
 external/glfw/examples/clean: external/glfw/examples/CMakeFiles/splitview.dir/clean
+external/glfw/examples/clean: external/glfw/examples/CMakeFiles/triangle-opengl.dir/clean
+external/glfw/examples/clean: external/glfw/examples/CMakeFiles/triangle-opengles.dir/clean
 external/glfw/examples/clean: external/glfw/examples/CMakeFiles/wave.dir/clean
+external/glfw/examples/clean: external/glfw/examples/CMakeFiles/windows.dir/clean
 .PHONY : external/glfw/examples/clean
 
 #=============================================================================
@@ -183,14 +187,15 @@ external/glfw/src/preinstall:
 .PHONY : external/glfw/src/preinstall
 
 # Recursive "clean" directory target.
-external/glfw/src/clean: external/glfw/src/CMakeFiles/update_mappings.dir/clean
 external/glfw/src/clean: external/glfw/src/CMakeFiles/glfw.dir/clean
+external/glfw/src/clean: external/glfw/src/CMakeFiles/update_mappings.dir/clean
 .PHONY : external/glfw/src/clean
 
 #=============================================================================
 # Directory level rules for directory external/glfw/tests
 
 # Recursive "all" directory target.
+external/glfw/tests/all: external/glfw/tests/CMakeFiles/allocator.dir/all
 external/glfw/tests/all: external/glfw/tests/CMakeFiles/clipboard.dir/all
 external/glfw/tests/all: external/glfw/tests/CMakeFiles/events.dir/all
 external/glfw/tests/all: external/glfw/tests/CMakeFiles/msaa.dir/all
@@ -204,13 +209,12 @@ external/glfw/tests/all: external/glfw/tests/CMakeFiles/gamma.dir/all
 external/glfw/tests/all: external/glfw/tests/CMakeFiles/icon.dir/all
 external/glfw/tests/all: external/glfw/tests/CMakeFiles/inputlag.dir/all
 external/glfw/tests/all: external/glfw/tests/CMakeFiles/joysticks.dir/all
-external/glfw/tests/all: external/glfw/tests/CMakeFiles/opacity.dir/all
 external/glfw/tests/all: external/glfw/tests/CMakeFiles/tearing.dir/all
 external/glfw/tests/all: external/glfw/tests/CMakeFiles/threads.dir/all
 external/glfw/tests/all: external/glfw/tests/CMakeFiles/timeout.dir/all
 external/glfw/tests/all: external/glfw/tests/CMakeFiles/title.dir/all
 external/glfw/tests/all: external/glfw/tests/CMakeFiles/triangle-vulkan.dir/all
-external/glfw/tests/all: external/glfw/tests/CMakeFiles/windows.dir/all
+external/glfw/tests/all: external/glfw/tests/CMakeFiles/window.dir/all
 .PHONY : external/glfw/tests/all
 
 # Recursive "preinstall" directory target.
@@ -218,6 +222,7 @@ external/glfw/tests/preinstall:
 .PHONY : external/glfw/tests/preinstall
 
 # Recursive "clean" directory target.
+external/glfw/tests/clean: external/glfw/tests/CMakeFiles/allocator.dir/clean
 external/glfw/tests/clean: external/glfw/tests/CMakeFiles/clipboard.dir/clean
 external/glfw/tests/clean: external/glfw/tests/CMakeFiles/events.dir/clean
 external/glfw/tests/clean: external/glfw/tests/CMakeFiles/msaa.dir/clean
@@ -231,13 +236,12 @@ external/glfw/tests/clean: external/glfw/tests/CMakeFiles/gamma.dir/clean
 external/glfw/tests/clean: external/glfw/tests/CMakeFiles/icon.dir/clean
 external/glfw/tests/clean: external/glfw/tests/CMakeFiles/inputlag.dir/clean
 external/glfw/tests/clean: external/glfw/tests/CMakeFiles/joysticks.dir/clean
-external/glfw/tests/clean: external/glfw/tests/CMakeFiles/opacity.dir/clean
 external/glfw/tests/clean: external/glfw/tests/CMakeFiles/tearing.dir/clean
 external/glfw/tests/clean: external/glfw/tests/CMakeFiles/threads.dir/clean
 external/glfw/tests/clean: external/glfw/tests/CMakeFiles/timeout.dir/clean
 external/glfw/tests/clean: external/glfw/tests/CMakeFiles/title.dir/clean
 external/glfw/tests/clean: external/glfw/tests/CMakeFiles/triangle-vulkan.dir/clean
-external/glfw/tests/clean: external/glfw/tests/CMakeFiles/windows.dir/clean
+external/glfw/tests/clean: external/glfw/tests/CMakeFiles/window.dir/clean
 .PHONY : external/glfw/tests/clean
 
 #=============================================================================
@@ -249,12 +253,12 @@ CMakeFiles/a.out.dir/all: external/glfw/src/CMakeFiles/glfw.dir/all
 CMakeFiles/a.out.dir/all: external/glew/build/cmake/CMakeFiles/glew_s.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/a.out.dir/build.make CMakeFiles/a.out.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/a.out.dir/build.make CMakeFiles/a.out.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles --progress-num=1,2,3,4 "Built target a.out"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles --progress-num=1,2,3,4,5 "Built target a.out"
 .PHONY : CMakeFiles/a.out.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/a.out.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles 20
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles 29
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/a.out.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles 0
 .PHONY : CMakeFiles/a.out.dir/rule
@@ -275,7 +279,7 @@ CMakeFiles/a.out.dir/clean:
 Adder/CMakeFiles/adder.dir/all:
 	$(MAKE) $(MAKESILENT) -f Adder/CMakeFiles/adder.dir/build.make Adder/CMakeFiles/adder.dir/depend
 	$(MAKE) $(MAKESILENT) -f Adder/CMakeFiles/adder.dir/build.make Adder/CMakeFiles/adder.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles --progress-num=5,6 "Built target adder"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles --progress-num=6,7 "Built target adder"
 .PHONY : Adder/CMakeFiles/adder.dir/all
 
 # Build rule for subdir invocation for target.
@@ -321,13 +325,39 @@ external/glfw/CMakeFiles/uninstall.dir/clean:
 .PHONY : external/glfw/CMakeFiles/uninstall.dir/clean
 
 #=============================================================================
+# Target rules for target external/glfw/src/CMakeFiles/glfw.dir
+
+# All Build rule for target.
+external/glfw/src/CMakeFiles/glfw.dir/all:
+	$(MAKE) $(MAKESILENT) -f external/glfw/src/CMakeFiles/glfw.dir/build.make external/glfw/src/CMakeFiles/glfw.dir/depend
+	$(MAKE) $(MAKESILENT) -f external/glfw/src/CMakeFiles/glfw.dir/build.make external/glfw/src/CMakeFiles/glfw.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles --progress-num=30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49 "Built target glfw"
+.PHONY : external/glfw/src/CMakeFiles/glfw.dir/all
+
+# Build rule for subdir invocation for target.
+external/glfw/src/CMakeFiles/glfw.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles 20
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 external/glfw/src/CMakeFiles/glfw.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles 0
+.PHONY : external/glfw/src/CMakeFiles/glfw.dir/rule
+
+# Convenience name for target.
+glfw: external/glfw/src/CMakeFiles/glfw.dir/rule
+.PHONY : glfw
+
+# clean rule for target.
+external/glfw/src/CMakeFiles/glfw.dir/clean:
+	$(MAKE) $(MAKESILENT) -f external/glfw/src/CMakeFiles/glfw.dir/build.make external/glfw/src/CMakeFiles/glfw.dir/clean
+.PHONY : external/glfw/src/CMakeFiles/glfw.dir/clean
+
+#=============================================================================
 # Target rules for target external/glfw/src/CMakeFiles/update_mappings.dir
 
 # All Build rule for target.
 external/glfw/src/CMakeFiles/update_mappings.dir/all:
 	$(MAKE) $(MAKESILENT) -f external/glfw/src/CMakeFiles/update_mappings.dir/build.make external/glfw/src/CMakeFiles/update_mappings.dir/depend
 	$(MAKE) $(MAKESILENT) -f external/glfw/src/CMakeFiles/update_mappings.dir/build.make external/glfw/src/CMakeFiles/update_mappings.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles --progress-num=93 "Built target update_mappings"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles --progress-num=92 "Built target update_mappings"
 .PHONY : external/glfw/src/CMakeFiles/update_mappings.dir/all
 
 # Build rule for subdir invocation for target.
@@ -347,44 +377,18 @@ external/glfw/src/CMakeFiles/update_mappings.dir/clean:
 .PHONY : external/glfw/src/CMakeFiles/update_mappings.dir/clean
 
 #=============================================================================
-# Target rules for target external/glfw/src/CMakeFiles/glfw.dir
-
-# All Build rule for target.
-external/glfw/src/CMakeFiles/glfw.dir/all:
-	$(MAKE) $(MAKESILENT) -f external/glfw/src/CMakeFiles/glfw.dir/build.make external/glfw/src/CMakeFiles/glfw.dir/depend
-	$(MAKE) $(MAKESILENT) -f external/glfw/src/CMakeFiles/glfw.dir/build.make external/glfw/src/CMakeFiles/glfw.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles --progress-num=29,30,31,32,33,34,35,36,37,38,39,40 "Built target glfw"
-.PHONY : external/glfw/src/CMakeFiles/glfw.dir/all
-
-# Build rule for subdir invocation for target.
-external/glfw/src/CMakeFiles/glfw.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles 12
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 external/glfw/src/CMakeFiles/glfw.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles 0
-.PHONY : external/glfw/src/CMakeFiles/glfw.dir/rule
-
-# Convenience name for target.
-glfw: external/glfw/src/CMakeFiles/glfw.dir/rule
-.PHONY : glfw
-
-# clean rule for target.
-external/glfw/src/CMakeFiles/glfw.dir/clean:
-	$(MAKE) $(MAKESILENT) -f external/glfw/src/CMakeFiles/glfw.dir/build.make external/glfw/src/CMakeFiles/glfw.dir/clean
-.PHONY : external/glfw/src/CMakeFiles/glfw.dir/clean
-
-#=============================================================================
 # Target rules for target external/glfw/examples/CMakeFiles/boing.dir
 
 # All Build rule for target.
 external/glfw/examples/CMakeFiles/boing.dir/all: external/glfw/src/CMakeFiles/glfw.dir/all
 	$(MAKE) $(MAKESILENT) -f external/glfw/examples/CMakeFiles/boing.dir/build.make external/glfw/examples/CMakeFiles/boing.dir/depend
 	$(MAKE) $(MAKESILENT) -f external/glfw/examples/CMakeFiles/boing.dir/build.make external/glfw/examples/CMakeFiles/boing.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles --progress-num=7,8 "Built target boing"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles --progress-num=9,10 "Built target boing"
 .PHONY : external/glfw/examples/CMakeFiles/boing.dir/all
 
 # Build rule for subdir invocation for target.
 external/glfw/examples/CMakeFiles/boing.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles 14
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles 22
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 external/glfw/examples/CMakeFiles/boing.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles 0
 .PHONY : external/glfw/examples/CMakeFiles/boing.dir/rule
@@ -405,12 +409,12 @@ external/glfw/examples/CMakeFiles/boing.dir/clean:
 external/glfw/examples/CMakeFiles/gears.dir/all: external/glfw/src/CMakeFiles/glfw.dir/all
 	$(MAKE) $(MAKESILENT) -f external/glfw/examples/CMakeFiles/gears.dir/build.make external/glfw/examples/CMakeFiles/gears.dir/depend
 	$(MAKE) $(MAKESILENT) -f external/glfw/examples/CMakeFiles/gears.dir/build.make external/glfw/examples/CMakeFiles/gears.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles --progress-num=22,23,24 "Built target gears"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles --progress-num=23,24 "Built target gears"
 .PHONY : external/glfw/examples/CMakeFiles/gears.dir/all
 
 # Build rule for subdir invocation for target.
 external/glfw/examples/CMakeFiles/gears.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles 15
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles 22
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 external/glfw/examples/CMakeFiles/gears.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles 0
 .PHONY : external/glfw/examples/CMakeFiles/gears.dir/rule
@@ -431,12 +435,12 @@ external/glfw/examples/CMakeFiles/gears.dir/clean:
 external/glfw/examples/CMakeFiles/heightmap.dir/all: external/glfw/src/CMakeFiles/glfw.dir/all
 	$(MAKE) $(MAKESILENT) -f external/glfw/examples/CMakeFiles/heightmap.dir/build.make external/glfw/examples/CMakeFiles/heightmap.dir/depend
 	$(MAKE) $(MAKESILENT) -f external/glfw/examples/CMakeFiles/heightmap.dir/build.make external/glfw/examples/CMakeFiles/heightmap.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles --progress-num=45,46 "Built target heightmap"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles --progress-num=52,53 "Built target heightmap"
 .PHONY : external/glfw/examples/CMakeFiles/heightmap.dir/all
 
 # Build rule for subdir invocation for target.
 external/glfw/examples/CMakeFiles/heightmap.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles 14
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles 22
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 external/glfw/examples/CMakeFiles/heightmap.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles 0
 .PHONY : external/glfw/examples/CMakeFiles/heightmap.dir/rule
@@ -457,12 +461,12 @@ external/glfw/examples/CMakeFiles/heightmap.dir/clean:
 external/glfw/examples/CMakeFiles/offscreen.dir/all: external/glfw/src/CMakeFiles/glfw.dir/all
 	$(MAKE) $(MAKESILENT) -f external/glfw/examples/CMakeFiles/offscreen.dir/build.make external/glfw/examples/CMakeFiles/offscreen.dir/depend
 	$(MAKE) $(MAKESILENT) -f external/glfw/examples/CMakeFiles/offscreen.dir/build.make external/glfw/examples/CMakeFiles/offscreen.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles --progress-num=64,65 "Built target offscreen"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles --progress-num=68,69 "Built target offscreen"
 .PHONY : external/glfw/examples/CMakeFiles/offscreen.dir/all
 
 # Build rule for subdir invocation for target.
 external/glfw/examples/CMakeFiles/offscreen.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles 14
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles 22
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 external/glfw/examples/CMakeFiles/offscreen.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles 0
 .PHONY : external/glfw/examples/CMakeFiles/offscreen.dir/rule
@@ -483,12 +487,12 @@ external/glfw/examples/CMakeFiles/offscreen.dir/clean:
 external/glfw/examples/CMakeFiles/particles.dir/all: external/glfw/src/CMakeFiles/glfw.dir/all
 	$(MAKE) $(MAKESILENT) -f external/glfw/examples/CMakeFiles/particles.dir/build.make external/glfw/examples/CMakeFiles/particles.dir/depend
 	$(MAKE) $(MAKESILENT) -f external/glfw/examples/CMakeFiles/particles.dir/build.make external/glfw/examples/CMakeFiles/particles.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles --progress-num=68,69,70,71 "Built target particles"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles --progress-num=70,71,72,73 "Built target particles"
 .PHONY : external/glfw/examples/CMakeFiles/particles.dir/all
 
 # Build rule for subdir invocation for target.
 external/glfw/examples/CMakeFiles/particles.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles 16
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles 24
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 external/glfw/examples/CMakeFiles/particles.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles 0
 .PHONY : external/glfw/examples/CMakeFiles/particles.dir/rule
@@ -509,12 +513,12 @@ external/glfw/examples/CMakeFiles/particles.dir/clean:
 external/glfw/examples/CMakeFiles/sharing.dir/all: external/glfw/src/CMakeFiles/glfw.dir/all
 	$(MAKE) $(MAKESILENT) -f external/glfw/examples/CMakeFiles/sharing.dir/build.make external/glfw/examples/CMakeFiles/sharing.dir/depend
 	$(MAKE) $(MAKESILENT) -f external/glfw/examples/CMakeFiles/sharing.dir/build.make external/glfw/examples/CMakeFiles/sharing.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles --progress-num=74,75 "Built target sharing"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles --progress-num=76 "Built target sharing"
 .PHONY : external/glfw/examples/CMakeFiles/sharing.dir/all
 
 # Build rule for subdir invocation for target.
 external/glfw/examples/CMakeFiles/sharing.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles 14
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles 21
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 external/glfw/examples/CMakeFiles/sharing.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles 0
 .PHONY : external/glfw/examples/CMakeFiles/sharing.dir/rule
@@ -529,44 +533,18 @@ external/glfw/examples/CMakeFiles/sharing.dir/clean:
 .PHONY : external/glfw/examples/CMakeFiles/sharing.dir/clean
 
 #=============================================================================
-# Target rules for target external/glfw/examples/CMakeFiles/simple.dir
-
-# All Build rule for target.
-external/glfw/examples/CMakeFiles/simple.dir/all: external/glfw/src/CMakeFiles/glfw.dir/all
-	$(MAKE) $(MAKESILENT) -f external/glfw/examples/CMakeFiles/simple.dir/build.make external/glfw/examples/CMakeFiles/simple.dir/depend
-	$(MAKE) $(MAKESILENT) -f external/glfw/examples/CMakeFiles/simple.dir/build.make external/glfw/examples/CMakeFiles/simple.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles --progress-num=76,77,78 "Built target simple"
-.PHONY : external/glfw/examples/CMakeFiles/simple.dir/all
-
-# Build rule for subdir invocation for target.
-external/glfw/examples/CMakeFiles/simple.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles 15
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 external/glfw/examples/CMakeFiles/simple.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles 0
-.PHONY : external/glfw/examples/CMakeFiles/simple.dir/rule
-
-# Convenience name for target.
-simple: external/glfw/examples/CMakeFiles/simple.dir/rule
-.PHONY : simple
-
-# clean rule for target.
-external/glfw/examples/CMakeFiles/simple.dir/clean:
-	$(MAKE) $(MAKESILENT) -f external/glfw/examples/CMakeFiles/simple.dir/build.make external/glfw/examples/CMakeFiles/simple.dir/clean
-.PHONY : external/glfw/examples/CMakeFiles/simple.dir/clean
-
-#=============================================================================
 # Target rules for target external/glfw/examples/CMakeFiles/splitview.dir
 
 # All Build rule for target.
 external/glfw/examples/CMakeFiles/splitview.dir/all: external/glfw/src/CMakeFiles/glfw.dir/all
 	$(MAKE) $(MAKESILENT) -f external/glfw/examples/CMakeFiles/splitview.dir/build.make external/glfw/examples/CMakeFiles/splitview.dir/depend
 	$(MAKE) $(MAKESILENT) -f external/glfw/examples/CMakeFiles/splitview.dir/build.make external/glfw/examples/CMakeFiles/splitview.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles --progress-num=79,80 "Built target splitview"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles --progress-num=77,78 "Built target splitview"
 .PHONY : external/glfw/examples/CMakeFiles/splitview.dir/all
 
 # Build rule for subdir invocation for target.
 external/glfw/examples/CMakeFiles/splitview.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles 14
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles 22
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 external/glfw/examples/CMakeFiles/splitview.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles 0
 .PHONY : external/glfw/examples/CMakeFiles/splitview.dir/rule
@@ -581,6 +559,58 @@ external/glfw/examples/CMakeFiles/splitview.dir/clean:
 .PHONY : external/glfw/examples/CMakeFiles/splitview.dir/clean
 
 #=============================================================================
+# Target rules for target external/glfw/examples/CMakeFiles/triangle-opengl.dir
+
+# All Build rule for target.
+external/glfw/examples/CMakeFiles/triangle-opengl.dir/all: external/glfw/src/CMakeFiles/glfw.dir/all
+	$(MAKE) $(MAKESILENT) -f external/glfw/examples/CMakeFiles/triangle-opengl.dir/build.make external/glfw/examples/CMakeFiles/triangle-opengl.dir/depend
+	$(MAKE) $(MAKESILENT) -f external/glfw/examples/CMakeFiles/triangle-opengl.dir/build.make external/glfw/examples/CMakeFiles/triangle-opengl.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles --progress-num=87,88 "Built target triangle-opengl"
+.PHONY : external/glfw/examples/CMakeFiles/triangle-opengl.dir/all
+
+# Build rule for subdir invocation for target.
+external/glfw/examples/CMakeFiles/triangle-opengl.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles 22
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 external/glfw/examples/CMakeFiles/triangle-opengl.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles 0
+.PHONY : external/glfw/examples/CMakeFiles/triangle-opengl.dir/rule
+
+# Convenience name for target.
+triangle-opengl: external/glfw/examples/CMakeFiles/triangle-opengl.dir/rule
+.PHONY : triangle-opengl
+
+# clean rule for target.
+external/glfw/examples/CMakeFiles/triangle-opengl.dir/clean:
+	$(MAKE) $(MAKESILENT) -f external/glfw/examples/CMakeFiles/triangle-opengl.dir/build.make external/glfw/examples/CMakeFiles/triangle-opengl.dir/clean
+.PHONY : external/glfw/examples/CMakeFiles/triangle-opengl.dir/clean
+
+#=============================================================================
+# Target rules for target external/glfw/examples/CMakeFiles/triangle-opengles.dir
+
+# All Build rule for target.
+external/glfw/examples/CMakeFiles/triangle-opengles.dir/all: external/glfw/src/CMakeFiles/glfw.dir/all
+	$(MAKE) $(MAKESILENT) -f external/glfw/examples/CMakeFiles/triangle-opengles.dir/build.make external/glfw/examples/CMakeFiles/triangle-opengles.dir/depend
+	$(MAKE) $(MAKESILENT) -f external/glfw/examples/CMakeFiles/triangle-opengles.dir/build.make external/glfw/examples/CMakeFiles/triangle-opengles.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles --progress-num=89,90 "Built target triangle-opengles"
+.PHONY : external/glfw/examples/CMakeFiles/triangle-opengles.dir/all
+
+# Build rule for subdir invocation for target.
+external/glfw/examples/CMakeFiles/triangle-opengles.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles 22
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 external/glfw/examples/CMakeFiles/triangle-opengles.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles 0
+.PHONY : external/glfw/examples/CMakeFiles/triangle-opengles.dir/rule
+
+# Convenience name for target.
+triangle-opengles: external/glfw/examples/CMakeFiles/triangle-opengles.dir/rule
+.PHONY : triangle-opengles
+
+# clean rule for target.
+external/glfw/examples/CMakeFiles/triangle-opengles.dir/clean:
+	$(MAKE) $(MAKESILENT) -f external/glfw/examples/CMakeFiles/triangle-opengles.dir/build.make external/glfw/examples/CMakeFiles/triangle-opengles.dir/clean
+.PHONY : external/glfw/examples/CMakeFiles/triangle-opengles.dir/clean
+
+#=============================================================================
 # Target rules for target external/glfw/examples/CMakeFiles/wave.dir
 
 # All Build rule for target.
@@ -592,7 +622,7 @@ external/glfw/examples/CMakeFiles/wave.dir/all: external/glfw/src/CMakeFiles/glf
 
 # Build rule for subdir invocation for target.
 external/glfw/examples/CMakeFiles/wave.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles 14
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles 22
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 external/glfw/examples/CMakeFiles/wave.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles 0
 .PHONY : external/glfw/examples/CMakeFiles/wave.dir/rule
@@ -607,18 +637,70 @@ external/glfw/examples/CMakeFiles/wave.dir/clean:
 .PHONY : external/glfw/examples/CMakeFiles/wave.dir/clean
 
 #=============================================================================
+# Target rules for target external/glfw/examples/CMakeFiles/windows.dir
+
+# All Build rule for target.
+external/glfw/examples/CMakeFiles/windows.dir/all: external/glfw/src/CMakeFiles/glfw.dir/all
+	$(MAKE) $(MAKESILENT) -f external/glfw/examples/CMakeFiles/windows.dir/build.make external/glfw/examples/CMakeFiles/windows.dir/depend
+	$(MAKE) $(MAKESILENT) -f external/glfw/examples/CMakeFiles/windows.dir/build.make external/glfw/examples/CMakeFiles/windows.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles --progress-num=99,100 "Built target windows"
+.PHONY : external/glfw/examples/CMakeFiles/windows.dir/all
+
+# Build rule for subdir invocation for target.
+external/glfw/examples/CMakeFiles/windows.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles 22
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 external/glfw/examples/CMakeFiles/windows.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles 0
+.PHONY : external/glfw/examples/CMakeFiles/windows.dir/rule
+
+# Convenience name for target.
+windows: external/glfw/examples/CMakeFiles/windows.dir/rule
+.PHONY : windows
+
+# clean rule for target.
+external/glfw/examples/CMakeFiles/windows.dir/clean:
+	$(MAKE) $(MAKESILENT) -f external/glfw/examples/CMakeFiles/windows.dir/build.make external/glfw/examples/CMakeFiles/windows.dir/clean
+.PHONY : external/glfw/examples/CMakeFiles/windows.dir/clean
+
+#=============================================================================
+# Target rules for target external/glfw/tests/CMakeFiles/allocator.dir
+
+# All Build rule for target.
+external/glfw/tests/CMakeFiles/allocator.dir/all: external/glfw/src/CMakeFiles/glfw.dir/all
+	$(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/allocator.dir/build.make external/glfw/tests/CMakeFiles/allocator.dir/depend
+	$(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/allocator.dir/build.make external/glfw/tests/CMakeFiles/allocator.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles --progress-num=8 "Built target allocator"
+.PHONY : external/glfw/tests/CMakeFiles/allocator.dir/all
+
+# Build rule for subdir invocation for target.
+external/glfw/tests/CMakeFiles/allocator.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles 21
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 external/glfw/tests/CMakeFiles/allocator.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles 0
+.PHONY : external/glfw/tests/CMakeFiles/allocator.dir/rule
+
+# Convenience name for target.
+allocator: external/glfw/tests/CMakeFiles/allocator.dir/rule
+.PHONY : allocator
+
+# clean rule for target.
+external/glfw/tests/CMakeFiles/allocator.dir/clean:
+	$(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/allocator.dir/build.make external/glfw/tests/CMakeFiles/allocator.dir/clean
+.PHONY : external/glfw/tests/CMakeFiles/allocator.dir/clean
+
+#=============================================================================
 # Target rules for target external/glfw/tests/CMakeFiles/clipboard.dir
 
 # All Build rule for target.
 external/glfw/tests/CMakeFiles/clipboard.dir/all: external/glfw/src/CMakeFiles/glfw.dir/all
 	$(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/clipboard.dir/build.make external/glfw/tests/CMakeFiles/clipboard.dir/depend
 	$(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/clipboard.dir/build.make external/glfw/tests/CMakeFiles/clipboard.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles --progress-num=9,10,11 "Built target clipboard"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles --progress-num=11,12,13 "Built target clipboard"
 .PHONY : external/glfw/tests/CMakeFiles/clipboard.dir/all
 
 # Build rule for subdir invocation for target.
 external/glfw/tests/CMakeFiles/clipboard.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles 15
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles 23
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 external/glfw/tests/CMakeFiles/clipboard.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles 0
 .PHONY : external/glfw/tests/CMakeFiles/clipboard.dir/rule
@@ -639,12 +721,12 @@ external/glfw/tests/CMakeFiles/clipboard.dir/clean:
 external/glfw/tests/CMakeFiles/events.dir/all: external/glfw/src/CMakeFiles/glfw.dir/all
 	$(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/events.dir/build.make external/glfw/tests/CMakeFiles/events.dir/depend
 	$(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/events.dir/build.make external/glfw/tests/CMakeFiles/events.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles --progress-num=17,18,19 "Built target events"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles --progress-num=18,19,20 "Built target events"
 .PHONY : external/glfw/tests/CMakeFiles/events.dir/all
 
 # Build rule for subdir invocation for target.
 external/glfw/tests/CMakeFiles/events.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles 15
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles 23
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 external/glfw/tests/CMakeFiles/events.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles 0
 .PHONY : external/glfw/tests/CMakeFiles/events.dir/rule
@@ -665,12 +747,12 @@ external/glfw/tests/CMakeFiles/events.dir/clean:
 external/glfw/tests/CMakeFiles/msaa.dir/all: external/glfw/src/CMakeFiles/glfw.dir/all
 	$(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/msaa.dir/build.make external/glfw/tests/CMakeFiles/msaa.dir/depend
 	$(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/msaa.dir/build.make external/glfw/tests/CMakeFiles/msaa.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles --progress-num=61,62,63 "Built target msaa"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles --progress-num=66,67 "Built target msaa"
 .PHONY : external/glfw/tests/CMakeFiles/msaa.dir/all
 
 # Build rule for subdir invocation for target.
 external/glfw/tests/CMakeFiles/msaa.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles 15
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles 22
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 external/glfw/tests/CMakeFiles/msaa.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles 0
 .PHONY : external/glfw/tests/CMakeFiles/msaa.dir/rule
@@ -691,12 +773,12 @@ external/glfw/tests/CMakeFiles/msaa.dir/clean:
 external/glfw/tests/CMakeFiles/glfwinfo.dir/all: external/glfw/src/CMakeFiles/glfw.dir/all
 	$(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/glfwinfo.dir/build.make external/glfw/tests/CMakeFiles/glfwinfo.dir/depend
 	$(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/glfwinfo.dir/build.make external/glfw/tests/CMakeFiles/glfwinfo.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles --progress-num=41,42,43,44 "Built target glfwinfo"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles --progress-num=50,51 "Built target glfwinfo"
 .PHONY : external/glfw/tests/CMakeFiles/glfwinfo.dir/all
 
 # Build rule for subdir invocation for target.
 external/glfw/tests/CMakeFiles/glfwinfo.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles 16
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles 22
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 external/glfw/tests/CMakeFiles/glfwinfo.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles 0
 .PHONY : external/glfw/tests/CMakeFiles/glfwinfo.dir/rule
@@ -717,12 +799,12 @@ external/glfw/tests/CMakeFiles/glfwinfo.dir/clean:
 external/glfw/tests/CMakeFiles/iconify.dir/all: external/glfw/src/CMakeFiles/glfw.dir/all
 	$(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/iconify.dir/build.make external/glfw/tests/CMakeFiles/iconify.dir/depend
 	$(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/iconify.dir/build.make external/glfw/tests/CMakeFiles/iconify.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles --progress-num=49,50,51 "Built target iconify"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles --progress-num=56,57,58 "Built target iconify"
 .PHONY : external/glfw/tests/CMakeFiles/iconify.dir/all
 
 # Build rule for subdir invocation for target.
 external/glfw/tests/CMakeFiles/iconify.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles 15
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles 23
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 external/glfw/tests/CMakeFiles/iconify.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles 0
 .PHONY : external/glfw/tests/CMakeFiles/iconify.dir/rule
@@ -743,12 +825,12 @@ external/glfw/tests/CMakeFiles/iconify.dir/clean:
 external/glfw/tests/CMakeFiles/monitors.dir/all: external/glfw/src/CMakeFiles/glfw.dir/all
 	$(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/monitors.dir/build.make external/glfw/tests/CMakeFiles/monitors.dir/depend
 	$(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/monitors.dir/build.make external/glfw/tests/CMakeFiles/monitors.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles --progress-num=58,59,60 "Built target monitors"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles --progress-num=63,64,65 "Built target monitors"
 .PHONY : external/glfw/tests/CMakeFiles/monitors.dir/all
 
 # Build rule for subdir invocation for target.
 external/glfw/tests/CMakeFiles/monitors.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles 15
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles 23
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 external/glfw/tests/CMakeFiles/monitors.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles 0
 .PHONY : external/glfw/tests/CMakeFiles/monitors.dir/rule
@@ -769,12 +851,12 @@ external/glfw/tests/CMakeFiles/monitors.dir/clean:
 external/glfw/tests/CMakeFiles/reopen.dir/all: external/glfw/src/CMakeFiles/glfw.dir/all
 	$(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/reopen.dir/build.make external/glfw/tests/CMakeFiles/reopen.dir/depend
 	$(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/reopen.dir/build.make external/glfw/tests/CMakeFiles/reopen.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles --progress-num=72,73 "Built target reopen"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles --progress-num=74,75 "Built target reopen"
 .PHONY : external/glfw/tests/CMakeFiles/reopen.dir/all
 
 # Build rule for subdir invocation for target.
 external/glfw/tests/CMakeFiles/reopen.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles 14
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles 22
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 external/glfw/tests/CMakeFiles/reopen.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles 0
 .PHONY : external/glfw/tests/CMakeFiles/reopen.dir/rule
@@ -795,12 +877,12 @@ external/glfw/tests/CMakeFiles/reopen.dir/clean:
 external/glfw/tests/CMakeFiles/cursor.dir/all: external/glfw/src/CMakeFiles/glfw.dir/all
 	$(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/cursor.dir/build.make external/glfw/tests/CMakeFiles/cursor.dir/depend
 	$(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/cursor.dir/build.make external/glfw/tests/CMakeFiles/cursor.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles --progress-num=12,13 "Built target cursor"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles --progress-num=14,15 "Built target cursor"
 .PHONY : external/glfw/tests/CMakeFiles/cursor.dir/all
 
 # Build rule for subdir invocation for target.
 external/glfw/tests/CMakeFiles/cursor.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles 14
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles 22
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 external/glfw/tests/CMakeFiles/cursor.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles 0
 .PHONY : external/glfw/tests/CMakeFiles/cursor.dir/rule
@@ -821,12 +903,12 @@ external/glfw/tests/CMakeFiles/cursor.dir/clean:
 external/glfw/tests/CMakeFiles/empty.dir/all: external/glfw/src/CMakeFiles/glfw.dir/all
 	$(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/empty.dir/build.make external/glfw/tests/CMakeFiles/empty.dir/depend
 	$(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/empty.dir/build.make external/glfw/tests/CMakeFiles/empty.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles --progress-num=14,15,16 "Built target empty"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles --progress-num=16,17 "Built target empty"
 .PHONY : external/glfw/tests/CMakeFiles/empty.dir/all
 
 # Build rule for subdir invocation for target.
 external/glfw/tests/CMakeFiles/empty.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles 15
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles 22
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 external/glfw/tests/CMakeFiles/empty.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles 0
 .PHONY : external/glfw/tests/CMakeFiles/empty.dir/rule
@@ -847,12 +929,12 @@ external/glfw/tests/CMakeFiles/empty.dir/clean:
 external/glfw/tests/CMakeFiles/gamma.dir/all: external/glfw/src/CMakeFiles/glfw.dir/all
 	$(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/gamma.dir/build.make external/glfw/tests/CMakeFiles/gamma.dir/depend
 	$(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/gamma.dir/build.make external/glfw/tests/CMakeFiles/gamma.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles --progress-num=20,21 "Built target gamma"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles --progress-num=21,22 "Built target gamma"
 .PHONY : external/glfw/tests/CMakeFiles/gamma.dir/all
 
 # Build rule for subdir invocation for target.
 external/glfw/tests/CMakeFiles/gamma.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles 14
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles 22
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 external/glfw/tests/CMakeFiles/gamma.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles 0
 .PHONY : external/glfw/tests/CMakeFiles/gamma.dir/rule
@@ -873,12 +955,12 @@ external/glfw/tests/CMakeFiles/gamma.dir/clean:
 external/glfw/tests/CMakeFiles/icon.dir/all: external/glfw/src/CMakeFiles/glfw.dir/all
 	$(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/icon.dir/build.make external/glfw/tests/CMakeFiles/icon.dir/depend
 	$(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/icon.dir/build.make external/glfw/tests/CMakeFiles/icon.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles --progress-num=47,48 "Built target icon"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles --progress-num=54,55 "Built target icon"
 .PHONY : external/glfw/tests/CMakeFiles/icon.dir/all
 
 # Build rule for subdir invocation for target.
 external/glfw/tests/CMakeFiles/icon.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles 14
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles 22
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 external/glfw/tests/CMakeFiles/icon.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles 0
 .PHONY : external/glfw/tests/CMakeFiles/icon.dir/rule
@@ -899,12 +981,12 @@ external/glfw/tests/CMakeFiles/icon.dir/clean:
 external/glfw/tests/CMakeFiles/inputlag.dir/all: external/glfw/src/CMakeFiles/glfw.dir/all
 	$(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/inputlag.dir/build.make external/glfw/tests/CMakeFiles/inputlag.dir/depend
 	$(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/inputlag.dir/build.make external/glfw/tests/CMakeFiles/inputlag.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles --progress-num=52,53,54 "Built target inputlag"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles --progress-num=59,60 "Built target inputlag"
 .PHONY : external/glfw/tests/CMakeFiles/inputlag.dir/all
 
 # Build rule for subdir invocation for target.
 external/glfw/tests/CMakeFiles/inputlag.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles 15
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles 22
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 external/glfw/tests/CMakeFiles/inputlag.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles 0
 .PHONY : external/glfw/tests/CMakeFiles/inputlag.dir/rule
@@ -925,12 +1007,12 @@ external/glfw/tests/CMakeFiles/inputlag.dir/clean:
 external/glfw/tests/CMakeFiles/joysticks.dir/all: external/glfw/src/CMakeFiles/glfw.dir/all
 	$(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/joysticks.dir/build.make external/glfw/tests/CMakeFiles/joysticks.dir/depend
 	$(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/joysticks.dir/build.make external/glfw/tests/CMakeFiles/joysticks.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles --progress-num=55,56,57 "Built target joysticks"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles --progress-num=61,62 "Built target joysticks"
 .PHONY : external/glfw/tests/CMakeFiles/joysticks.dir/all
 
 # Build rule for subdir invocation for target.
 external/glfw/tests/CMakeFiles/joysticks.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles 15
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles 22
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 external/glfw/tests/CMakeFiles/joysticks.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles 0
 .PHONY : external/glfw/tests/CMakeFiles/joysticks.dir/rule
@@ -945,44 +1027,18 @@ external/glfw/tests/CMakeFiles/joysticks.dir/clean:
 .PHONY : external/glfw/tests/CMakeFiles/joysticks.dir/clean
 
 #=============================================================================
-# Target rules for target external/glfw/tests/CMakeFiles/opacity.dir
-
-# All Build rule for target.
-external/glfw/tests/CMakeFiles/opacity.dir/all: external/glfw/src/CMakeFiles/glfw.dir/all
-	$(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/opacity.dir/build.make external/glfw/tests/CMakeFiles/opacity.dir/depend
-	$(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/opacity.dir/build.make external/glfw/tests/CMakeFiles/opacity.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles --progress-num=66,67 "Built target opacity"
-.PHONY : external/glfw/tests/CMakeFiles/opacity.dir/all
-
-# Build rule for subdir invocation for target.
-external/glfw/tests/CMakeFiles/opacity.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles 14
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 external/glfw/tests/CMakeFiles/opacity.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles 0
-.PHONY : external/glfw/tests/CMakeFiles/opacity.dir/rule
-
-# Convenience name for target.
-opacity: external/glfw/tests/CMakeFiles/opacity.dir/rule
-.PHONY : opacity
-
-# clean rule for target.
-external/glfw/tests/CMakeFiles/opacity.dir/clean:
-	$(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/opacity.dir/build.make external/glfw/tests/CMakeFiles/opacity.dir/clean
-.PHONY : external/glfw/tests/CMakeFiles/opacity.dir/clean
-
-#=============================================================================
 # Target rules for target external/glfw/tests/CMakeFiles/tearing.dir
 
 # All Build rule for target.
 external/glfw/tests/CMakeFiles/tearing.dir/all: external/glfw/src/CMakeFiles/glfw.dir/all
 	$(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/tearing.dir/build.make external/glfw/tests/CMakeFiles/tearing.dir/depend
 	$(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/tearing.dir/build.make external/glfw/tests/CMakeFiles/tearing.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles --progress-num=81,82 "Built target tearing"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles --progress-num=79,80 "Built target tearing"
 .PHONY : external/glfw/tests/CMakeFiles/tearing.dir/all
 
 # Build rule for subdir invocation for target.
 external/glfw/tests/CMakeFiles/tearing.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles 14
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles 22
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 external/glfw/tests/CMakeFiles/tearing.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles 0
 .PHONY : external/glfw/tests/CMakeFiles/tearing.dir/rule
@@ -1003,12 +1059,12 @@ external/glfw/tests/CMakeFiles/tearing.dir/clean:
 external/glfw/tests/CMakeFiles/threads.dir/all: external/glfw/src/CMakeFiles/glfw.dir/all
 	$(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/threads.dir/build.make external/glfw/tests/CMakeFiles/threads.dir/depend
 	$(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/threads.dir/build.make external/glfw/tests/CMakeFiles/threads.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles --progress-num=83,84,85 "Built target threads"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles --progress-num=81,82,83 "Built target threads"
 .PHONY : external/glfw/tests/CMakeFiles/threads.dir/all
 
 # Build rule for subdir invocation for target.
 external/glfw/tests/CMakeFiles/threads.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles 15
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles 23
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 external/glfw/tests/CMakeFiles/threads.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles 0
 .PHONY : external/glfw/tests/CMakeFiles/threads.dir/rule
@@ -1029,12 +1085,12 @@ external/glfw/tests/CMakeFiles/threads.dir/clean:
 external/glfw/tests/CMakeFiles/timeout.dir/all: external/glfw/src/CMakeFiles/glfw.dir/all
 	$(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/timeout.dir/build.make external/glfw/tests/CMakeFiles/timeout.dir/depend
 	$(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/timeout.dir/build.make external/glfw/tests/CMakeFiles/timeout.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles --progress-num=86,87 "Built target timeout"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles --progress-num=84 "Built target timeout"
 .PHONY : external/glfw/tests/CMakeFiles/timeout.dir/all
 
 # Build rule for subdir invocation for target.
 external/glfw/tests/CMakeFiles/timeout.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles 14
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles 21
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 external/glfw/tests/CMakeFiles/timeout.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles 0
 .PHONY : external/glfw/tests/CMakeFiles/timeout.dir/rule
@@ -1055,12 +1111,12 @@ external/glfw/tests/CMakeFiles/timeout.dir/clean:
 external/glfw/tests/CMakeFiles/title.dir/all: external/glfw/src/CMakeFiles/glfw.dir/all
 	$(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/title.dir/build.make external/glfw/tests/CMakeFiles/title.dir/depend
 	$(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/title.dir/build.make external/glfw/tests/CMakeFiles/title.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles --progress-num=88,89,90 "Built target title"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles --progress-num=85,86 "Built target title"
 .PHONY : external/glfw/tests/CMakeFiles/title.dir/all
 
 # Build rule for subdir invocation for target.
 external/glfw/tests/CMakeFiles/title.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles 15
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles 22
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 external/glfw/tests/CMakeFiles/title.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles 0
 .PHONY : external/glfw/tests/CMakeFiles/title.dir/rule
@@ -1081,12 +1137,12 @@ external/glfw/tests/CMakeFiles/title.dir/clean:
 external/glfw/tests/CMakeFiles/triangle-vulkan.dir/all: external/glfw/src/CMakeFiles/glfw.dir/all
 	$(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/triangle-vulkan.dir/build.make external/glfw/tests/CMakeFiles/triangle-vulkan.dir/depend
 	$(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/triangle-vulkan.dir/build.make external/glfw/tests/CMakeFiles/triangle-vulkan.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles --progress-num=91,92 "Built target triangle-vulkan"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles --progress-num=91 "Built target triangle-vulkan"
 .PHONY : external/glfw/tests/CMakeFiles/triangle-vulkan.dir/all
 
 # Build rule for subdir invocation for target.
 external/glfw/tests/CMakeFiles/triangle-vulkan.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles 14
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles 21
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 external/glfw/tests/CMakeFiles/triangle-vulkan.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles 0
 .PHONY : external/glfw/tests/CMakeFiles/triangle-vulkan.dir/rule
@@ -1101,30 +1157,30 @@ external/glfw/tests/CMakeFiles/triangle-vulkan.dir/clean:
 .PHONY : external/glfw/tests/CMakeFiles/triangle-vulkan.dir/clean
 
 #=============================================================================
-# Target rules for target external/glfw/tests/CMakeFiles/windows.dir
+# Target rules for target external/glfw/tests/CMakeFiles/window.dir
 
 # All Build rule for target.
-external/glfw/tests/CMakeFiles/windows.dir/all: external/glfw/src/CMakeFiles/glfw.dir/all
-	$(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/windows.dir/build.make external/glfw/tests/CMakeFiles/windows.dir/depend
-	$(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/windows.dir/build.make external/glfw/tests/CMakeFiles/windows.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles --progress-num=97,98,99,100 "Built target windows"
-.PHONY : external/glfw/tests/CMakeFiles/windows.dir/all
+external/glfw/tests/CMakeFiles/window.dir/all: external/glfw/src/CMakeFiles/glfw.dir/all
+	$(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/window.dir/build.make external/glfw/tests/CMakeFiles/window.dir/depend
+	$(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/window.dir/build.make external/glfw/tests/CMakeFiles/window.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles --progress-num=97,98 "Built target window"
+.PHONY : external/glfw/tests/CMakeFiles/window.dir/all
 
 # Build rule for subdir invocation for target.
-external/glfw/tests/CMakeFiles/windows.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles 16
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 external/glfw/tests/CMakeFiles/windows.dir/all
+external/glfw/tests/CMakeFiles/window.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles 22
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 external/glfw/tests/CMakeFiles/window.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles 0
-.PHONY : external/glfw/tests/CMakeFiles/windows.dir/rule
+.PHONY : external/glfw/tests/CMakeFiles/window.dir/rule
 
 # Convenience name for target.
-windows: external/glfw/tests/CMakeFiles/windows.dir/rule
-.PHONY : windows
+window: external/glfw/tests/CMakeFiles/window.dir/rule
+.PHONY : window
 
 # clean rule for target.
-external/glfw/tests/CMakeFiles/windows.dir/clean:
-	$(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/windows.dir/build.make external/glfw/tests/CMakeFiles/windows.dir/clean
-.PHONY : external/glfw/tests/CMakeFiles/windows.dir/clean
+external/glfw/tests/CMakeFiles/window.dir/clean:
+	$(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/window.dir/build.make external/glfw/tests/CMakeFiles/window.dir/clean
+.PHONY : external/glfw/tests/CMakeFiles/window.dir/clean
 
 #=============================================================================
 # Target rules for target external/glew/build/cmake/CMakeFiles/glew.dir
@@ -1185,12 +1241,12 @@ external/glew/build/cmake/CMakeFiles/glew_s.dir/clean:
 external/glew/build/cmake/CMakeFiles/glewinfo.dir/all: external/glew/build/cmake/CMakeFiles/glew.dir/all
 	$(MAKE) $(MAKESILENT) -f external/glew/build/cmake/CMakeFiles/glewinfo.dir/build.make external/glew/build/cmake/CMakeFiles/glewinfo.dir/depend
 	$(MAKE) $(MAKESILENT) -f external/glew/build/cmake/CMakeFiles/glewinfo.dir/build.make external/glew/build/cmake/CMakeFiles/glewinfo.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles --progress-num=28 "Built target glewinfo"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles --progress-num=28,29 "Built target glewinfo"
 .PHONY : external/glew/build/cmake/CMakeFiles/glewinfo.dir/all
 
 # Build rule for subdir invocation for target.
 external/glew/build/cmake/CMakeFiles/glewinfo.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles 3
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 external/glew/build/cmake/CMakeFiles/glewinfo.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles 0
 .PHONY : external/glew/build/cmake/CMakeFiles/glewinfo.dir/rule
@@ -1211,12 +1267,12 @@ external/glew/build/cmake/CMakeFiles/glewinfo.dir/clean:
 external/glew/build/cmake/CMakeFiles/visualinfo.dir/all: external/glew/build/cmake/CMakeFiles/glew.dir/all
 	$(MAKE) $(MAKESILENT) -f external/glew/build/cmake/CMakeFiles/visualinfo.dir/build.make external/glew/build/cmake/CMakeFiles/visualinfo.dir/depend
 	$(MAKE) $(MAKESILENT) -f external/glew/build/cmake/CMakeFiles/visualinfo.dir/build.make external/glew/build/cmake/CMakeFiles/visualinfo.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles --progress-num=94 "Built target visualinfo"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles --progress-num=93,94 "Built target visualinfo"
 .PHONY : external/glew/build/cmake/CMakeFiles/visualinfo.dir/all
 
 # Build rule for subdir invocation for target.
 external/glew/build/cmake/CMakeFiles/visualinfo.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles 3
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 external/glew/build/cmake/CMakeFiles/visualinfo.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles 0
 .PHONY : external/glew/build/cmake/CMakeFiles/visualinfo.dir/rule

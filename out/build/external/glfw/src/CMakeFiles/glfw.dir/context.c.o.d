@@ -1,10 +1,9 @@
 external/glfw/src/CMakeFiles/glfw.dir/context.c.o: \
   /Users/myronphan/LinearSystemLibrary/external/glfw/src/context.c \
   /Users/myronphan/LinearSystemLibrary/external/glfw/src/internal.h \
-  /Users/myronphan/LinearSystemLibrary/out/build/external/glfw/src/glfw_config.h \
   /Users/myronphan/LinearSystemLibrary/external/glfw/src/../include/GLFW/glfw3.h \
-  /Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include/stddef.h \
-  /Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include/stdint.h \
+  /Library/Developer/CommandLineTools/usr/lib/clang/12.0.5/include/stddef.h \
+  /Library/Developer/CommandLineTools/usr/lib/clang/12.0.5/include/stdint.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/usr/include/stdint.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/usr/include/sys/_types/_int8_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/usr/include/sys/_types/_int16_t.h \
@@ -31,12 +30,9 @@ external/glfw/src/CMakeFiles/glfw.dir/context.c.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/usr/include/sys/_types/_uintptr_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/usr/include/_types/_intmax_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/usr/include/_types/_uintmax_t.h \
+  /Users/myronphan/LinearSystemLibrary/external/glfw/src/platform.h \
+  /Users/myronphan/LinearSystemLibrary/external/glfw/src/null_platform.h \
   /Users/myronphan/LinearSystemLibrary/external/glfw/src/cocoa_platform.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/usr/include/dlfcn.h \
-  /Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include/stdbool.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/usr/include/Availability.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/usr/include/AvailabilityVersions.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/usr/include/AvailabilityInternal.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/System/Library/Frameworks/Carbon.framework/Headers/Carbon.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/System/Library/Frameworks/CoreServices.framework/Headers/CoreServices.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CoreFoundation.h \
@@ -75,6 +71,9 @@ external/glfw/src/CMakeFiles/glfw.dir/context.c.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/usr/include/sys/_types/_rsize_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/usr/include/sys/_types/_errno_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/usr/include/sys/_types/_fd_def.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/usr/include/Availability.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/usr/include/AvailabilityVersions.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/usr/include/AvailabilityInternal.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/usr/include/sys/_types/_fd_setsize.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/usr/include/sys/_types/_fd_set.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/usr/include/sys/_types/_fd_clr.h \
@@ -93,7 +92,7 @@ external/glfw/src/CMakeFiles/glfw.dir/context.c.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/usr/include/sys/_pthread/_pthread_key_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/usr/include/sys/_types/_fsblkcnt_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/usr/include/sys/_types/_fsfilcnt_t.h \
-  /Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include/stdarg.h \
+  /Library/Developer/CommandLineTools/usr/lib/clang/12.0.5/include/stdarg.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/usr/include/assert.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/usr/include/ctype.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/usr/include/_ctype.h \
@@ -105,9 +104,9 @@ external/glfw/src/CMakeFiles/glfw.dir/context.c.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/usr/include/sys/_types/_wint_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/usr/include/errno.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/usr/include/sys/errno.h \
-  /Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include/float.h \
+  /Library/Developer/CommandLineTools/usr/lib/clang/12.0.5/include/float.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/usr/include/float.h \
-  /Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include/limits.h \
+  /Library/Developer/CommandLineTools/usr/lib/clang/12.0.5/include/limits.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/usr/include/limits.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/usr/include/machine/limits.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/usr/include/i386/limits.h \
@@ -148,8 +147,9 @@ external/glfw/src/CMakeFiles/glfw.dir/context.c.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/usr/include/secure/_string.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/usr/include/time.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/usr/include/sys/_types/_timespec.h \
-  /Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include/inttypes.h \
+  /Library/Developer/CommandLineTools/usr/lib/clang/12.0.5/include/inttypes.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/usr/include/inttypes.h \
+  /Library/Developer/CommandLineTools/usr/lib/clang/12.0.5/include/stdbool.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CFBase.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/usr/include/TargetConditionals.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CFAvailability.h \
@@ -158,7 +158,7 @@ external/glfw/src/CMakeFiles/glfw.dir/context.c.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/usr/include/Block.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/usr/include/MacTypes.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/usr/include/ConditionalMacros.h \
-  /Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include/ptrauth.h \
+  /Library/Developer/CommandLineTools/usr/lib/clang/12.0.5/include/ptrauth.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CFArray.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CFBag.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CFBinaryHeap.h \
@@ -346,10 +346,10 @@ external/glfw/src/CMakeFiles/glfw.dir/context.c.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/System/Library/Frameworks/CoreServices.framework/Frameworks/CarbonCore.framework/Headers/DriverSynchronization.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/System/Library/Frameworks/CoreServices.framework/Frameworks/CarbonCore.framework/Headers/DriverServices.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/System/Library/Frameworks/CoreServices.framework/Frameworks/CarbonCore.framework/Headers/MachineExceptions.h \
-  /Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include/emmintrin.h \
-  /Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include/xmmintrin.h \
-  /Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include/mmintrin.h \
-  /Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include/mm_malloc.h \
+  /Library/Developer/CommandLineTools/usr/lib/clang/12.0.5/include/emmintrin.h \
+  /Library/Developer/CommandLineTools/usr/lib/clang/12.0.5/include/xmmintrin.h \
+  /Library/Developer/CommandLineTools/usr/lib/clang/12.0.5/include/mmintrin.h \
+  /Library/Developer/CommandLineTools/usr/lib/clang/12.0.5/include/mm_malloc.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/System/Library/Frameworks/CoreServices.framework/Frameworks/CarbonCore.framework/Headers/NumberFormatting.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/System/Library/Frameworks/CoreServices.framework/Frameworks/CarbonCore.framework/Headers/StringCompare.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/System/Library/Frameworks/CoreServices.framework/Frameworks/CarbonCore.framework/Headers/TextUtils.h \
@@ -766,14 +766,6 @@ external/glfw/src/CMakeFiles/glfw.dir/context.c.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/System/Library/Frameworks/Carbon.framework/Frameworks/Help.framework/Headers/Help.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/System/Library/Frameworks/Carbon.framework/Frameworks/Help.framework/Headers/AppleHelp.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/System/Library/Frameworks/Carbon.framework/Frameworks/ImageCapture.framework/Headers/ImageCapture.h \
-  /Users/myronphan/LinearSystemLibrary/external/glfw/src/posix_thread.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/usr/include/pthread.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/usr/include/pthread/sched.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/usr/include/pthread/pthread_impl.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/usr/include/pthread/qos.h \
-  /Users/myronphan/LinearSystemLibrary/external/glfw/src/cocoa_joystick.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/System/Library/Frameworks/IOKit.framework/Headers/IOCFPlugIn.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CFPlugInCOM.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/System/Library/Frameworks/IOKit.framework/Headers/hid/IOHIDLib.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/System/Library/Frameworks/IOKit.framework/Headers/hid/IOHIDBase.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/System/Library/Frameworks/IOKit.framework/Headers/hid/IOHIDKeys.h \
@@ -786,12 +778,18 @@ external/glfw/src/CMakeFiles/glfw.dir/context.c.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/System/Library/Frameworks/IOKit.framework/Headers/hid/IOHIDDevice.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/System/Library/Frameworks/IOKit.framework/Headers/hid/IOHIDElement.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/System/Library/Frameworks/IOKit.framework/Headers/hid/IOHIDLibObsolete.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CFPlugInCOM.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/System/Library/Frameworks/IOKit.framework/Headers/hid/IOHIDManager.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/System/Library/Frameworks/IOKit.framework/Headers/hid/IOHIDQueue.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/System/Library/Frameworks/IOKit.framework/Headers/hid/IOHIDUsageTables.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/System/Library/Frameworks/IOKit.framework/Headers/hid/IOHIDValue.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/System/Library/Frameworks/IOKit.framework/Headers/hid/IOHIDTransaction.h \
-  /Users/myronphan/LinearSystemLibrary/external/glfw/src/nsgl_context.h \
-  /Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include/stdatomic.h \
-  /Users/myronphan/LinearSystemLibrary/external/glfw/src/egl_context.h \
-  /Users/myronphan/LinearSystemLibrary/external/glfw/src/osmesa_context.h
+  /Users/myronphan/LinearSystemLibrary/external/glfw/src/null_joystick.h \
+  /Users/myronphan/LinearSystemLibrary/external/glfw/src/cocoa_joystick.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/System/Library/Frameworks/IOKit.framework/Headers/IOCFPlugIn.h \
+  /Users/myronphan/LinearSystemLibrary/external/glfw/src/posix_thread.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/usr/include/pthread.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/usr/include/pthread/sched.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/usr/include/pthread/pthread_impl.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/usr/include/pthread/qos.h \
+  /Users/myronphan/LinearSystemLibrary/external/glfw/src/cocoa_time.h

@@ -42,7 +42,7 @@ external/glfw/examples/CMakeFiles/particles.dir/particles.c.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/usr/include/sys/_types/_size_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/usr/include/sys/_types/_uid_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/usr/include/sys/resource.h \
-  /Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include/stdint.h \
+  /Library/Developer/CommandLineTools/usr/lib/clang/12.0.5/include/stdint.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/usr/include/stdint.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/usr/include/_types/_uint8_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/usr/include/_types/_uint16_t.h \
@@ -111,6 +111,5 @@ external/glfw/examples/CMakeFiles/particles.dir/particles.c.o: \
   /Users/myronphan/LinearSystemLibrary/external/glfw/deps/getopt.h \
   /Users/myronphan/LinearSystemLibrary/external/glfw/deps/linmath.h \
   /Users/myronphan/LinearSystemLibrary/external/glfw/deps/glad/gl.h \
-  /Users/myronphan/LinearSystemLibrary/external/glfw/deps/glad/khrplatform.h \
   /Users/myronphan/LinearSystemLibrary/external/glfw/include/GLFW/glfw3.h \
-  /Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include/stddef.h
+  /Library/Developer/CommandLineTools/usr/lib/clang/12.0.5/include/stddef.h

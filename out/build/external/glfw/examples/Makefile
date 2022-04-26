@@ -48,10 +48,10 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /opt/homebrew/Cellar/cmake/3.22.2/bin/cmake
+CMAKE_COMMAND = /usr/local/Cellar/cmake/3.22.2/bin/cmake
 
 # The command to remove a file.
-RM = /opt/homebrew/Cellar/cmake/3.22.2/bin/cmake -E rm -f
+RM = /usr/local/Cellar/cmake/3.22.2/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
@@ -78,7 +78,7 @@ edit_cache/fast: edit_cache
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/opt/homebrew/Cellar/cmake/3.22.2/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/usr/local/Cellar/cmake/3.22.2/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -97,37 +97,37 @@ list_install_components/fast: list_install_components
 # Special rule for the target install
 install: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/opt/homebrew/Cellar/cmake/3.22.2/bin/cmake -P cmake_install.cmake
+	/usr/local/Cellar/cmake/3.22.2/bin/cmake -P cmake_install.cmake
 .PHONY : install
 
 # Special rule for the target install
 install/fast: preinstall/fast
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/opt/homebrew/Cellar/cmake/3.22.2/bin/cmake -P cmake_install.cmake
+	/usr/local/Cellar/cmake/3.22.2/bin/cmake -P cmake_install.cmake
 .PHONY : install/fast
 
 # Special rule for the target install/local
 install/local: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/opt/homebrew/Cellar/cmake/3.22.2/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+	/usr/local/Cellar/cmake/3.22.2/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
 .PHONY : install/local
 
 # Special rule for the target install/local
 install/local/fast: preinstall/fast
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/opt/homebrew/Cellar/cmake/3.22.2/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+	/usr/local/Cellar/cmake/3.22.2/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
 .PHONY : install/local/fast
 
 # Special rule for the target install/strip
 install/strip: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/opt/homebrew/Cellar/cmake/3.22.2/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+	/usr/local/Cellar/cmake/3.22.2/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
 .PHONY : install/strip
 
 # Special rule for the target install/strip
 install/strip/fast: preinstall/fast
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/opt/homebrew/Cellar/cmake/3.22.2/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+	/usr/local/Cellar/cmake/3.22.2/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
 .PHONY : install/strip/fast
 
 # The main all target
@@ -246,20 +246,6 @@ sharing/fast:
 .PHONY : sharing/fast
 
 # Convenience name for target.
-external/glfw/examples/CMakeFiles/simple.dir/rule:
-	cd /Users/myronphan/LinearSystemLibrary/out/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 external/glfw/examples/CMakeFiles/simple.dir/rule
-.PHONY : external/glfw/examples/CMakeFiles/simple.dir/rule
-
-# Convenience name for target.
-simple: external/glfw/examples/CMakeFiles/simple.dir/rule
-.PHONY : simple
-
-# fast build rule for target.
-simple/fast:
-	cd /Users/myronphan/LinearSystemLibrary/out/build && $(MAKE) $(MAKESILENT) -f external/glfw/examples/CMakeFiles/simple.dir/build.make external/glfw/examples/CMakeFiles/simple.dir/build
-.PHONY : simple/fast
-
-# Convenience name for target.
 external/glfw/examples/CMakeFiles/splitview.dir/rule:
 	cd /Users/myronphan/LinearSystemLibrary/out/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 external/glfw/examples/CMakeFiles/splitview.dir/rule
 .PHONY : external/glfw/examples/CMakeFiles/splitview.dir/rule
@@ -274,6 +260,34 @@ splitview/fast:
 .PHONY : splitview/fast
 
 # Convenience name for target.
+external/glfw/examples/CMakeFiles/triangle-opengl.dir/rule:
+	cd /Users/myronphan/LinearSystemLibrary/out/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 external/glfw/examples/CMakeFiles/triangle-opengl.dir/rule
+.PHONY : external/glfw/examples/CMakeFiles/triangle-opengl.dir/rule
+
+# Convenience name for target.
+triangle-opengl: external/glfw/examples/CMakeFiles/triangle-opengl.dir/rule
+.PHONY : triangle-opengl
+
+# fast build rule for target.
+triangle-opengl/fast:
+	cd /Users/myronphan/LinearSystemLibrary/out/build && $(MAKE) $(MAKESILENT) -f external/glfw/examples/CMakeFiles/triangle-opengl.dir/build.make external/glfw/examples/CMakeFiles/triangle-opengl.dir/build
+.PHONY : triangle-opengl/fast
+
+# Convenience name for target.
+external/glfw/examples/CMakeFiles/triangle-opengles.dir/rule:
+	cd /Users/myronphan/LinearSystemLibrary/out/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 external/glfw/examples/CMakeFiles/triangle-opengles.dir/rule
+.PHONY : external/glfw/examples/CMakeFiles/triangle-opengles.dir/rule
+
+# Convenience name for target.
+triangle-opengles: external/glfw/examples/CMakeFiles/triangle-opengles.dir/rule
+.PHONY : triangle-opengles
+
+# fast build rule for target.
+triangle-opengles/fast:
+	cd /Users/myronphan/LinearSystemLibrary/out/build && $(MAKE) $(MAKESILENT) -f external/glfw/examples/CMakeFiles/triangle-opengles.dir/build.make external/glfw/examples/CMakeFiles/triangle-opengles.dir/build
+.PHONY : triangle-opengles/fast
+
+# Convenience name for target.
 external/glfw/examples/CMakeFiles/wave.dir/rule:
 	cd /Users/myronphan/LinearSystemLibrary/out/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 external/glfw/examples/CMakeFiles/wave.dir/rule
 .PHONY : external/glfw/examples/CMakeFiles/wave.dir/rule
@@ -286,6 +300,20 @@ wave: external/glfw/examples/CMakeFiles/wave.dir/rule
 wave/fast:
 	cd /Users/myronphan/LinearSystemLibrary/out/build && $(MAKE) $(MAKESILENT) -f external/glfw/examples/CMakeFiles/wave.dir/build.make external/glfw/examples/CMakeFiles/wave.dir/build
 .PHONY : wave/fast
+
+# Convenience name for target.
+external/glfw/examples/CMakeFiles/windows.dir/rule:
+	cd /Users/myronphan/LinearSystemLibrary/out/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 external/glfw/examples/CMakeFiles/windows.dir/rule
+.PHONY : external/glfw/examples/CMakeFiles/windows.dir/rule
+
+# Convenience name for target.
+windows: external/glfw/examples/CMakeFiles/windows.dir/rule
+.PHONY : windows
+
+# fast build rule for target.
+windows/fast:
+	cd /Users/myronphan/LinearSystemLibrary/out/build && $(MAKE) $(MAKESILENT) -f external/glfw/examples/CMakeFiles/windows.dir/build.make external/glfw/examples/CMakeFiles/windows.dir/build
+.PHONY : windows/fast
 
 __/deps/getopt.o: __/deps/getopt.c.o
 .PHONY : __/deps/getopt.o
@@ -310,54 +338,6 @@ __/deps/getopt.s: __/deps/getopt.c.s
 __/deps/getopt.c.s:
 	cd /Users/myronphan/LinearSystemLibrary/out/build && $(MAKE) $(MAKESILENT) -f external/glfw/examples/CMakeFiles/particles.dir/build.make external/glfw/examples/CMakeFiles/particles.dir/__/deps/getopt.c.s
 .PHONY : __/deps/getopt.c.s
-
-__/deps/glad_gl.o: __/deps/glad_gl.c.o
-.PHONY : __/deps/glad_gl.o
-
-# target to build an object file
-__/deps/glad_gl.c.o:
-	cd /Users/myronphan/LinearSystemLibrary/out/build && $(MAKE) $(MAKESILENT) -f external/glfw/examples/CMakeFiles/boing.dir/build.make external/glfw/examples/CMakeFiles/boing.dir/__/deps/glad_gl.c.o
-	cd /Users/myronphan/LinearSystemLibrary/out/build && $(MAKE) $(MAKESILENT) -f external/glfw/examples/CMakeFiles/gears.dir/build.make external/glfw/examples/CMakeFiles/gears.dir/__/deps/glad_gl.c.o
-	cd /Users/myronphan/LinearSystemLibrary/out/build && $(MAKE) $(MAKESILENT) -f external/glfw/examples/CMakeFiles/heightmap.dir/build.make external/glfw/examples/CMakeFiles/heightmap.dir/__/deps/glad_gl.c.o
-	cd /Users/myronphan/LinearSystemLibrary/out/build && $(MAKE) $(MAKESILENT) -f external/glfw/examples/CMakeFiles/offscreen.dir/build.make external/glfw/examples/CMakeFiles/offscreen.dir/__/deps/glad_gl.c.o
-	cd /Users/myronphan/LinearSystemLibrary/out/build && $(MAKE) $(MAKESILENT) -f external/glfw/examples/CMakeFiles/particles.dir/build.make external/glfw/examples/CMakeFiles/particles.dir/__/deps/glad_gl.c.o
-	cd /Users/myronphan/LinearSystemLibrary/out/build && $(MAKE) $(MAKESILENT) -f external/glfw/examples/CMakeFiles/sharing.dir/build.make external/glfw/examples/CMakeFiles/sharing.dir/__/deps/glad_gl.c.o
-	cd /Users/myronphan/LinearSystemLibrary/out/build && $(MAKE) $(MAKESILENT) -f external/glfw/examples/CMakeFiles/simple.dir/build.make external/glfw/examples/CMakeFiles/simple.dir/__/deps/glad_gl.c.o
-	cd /Users/myronphan/LinearSystemLibrary/out/build && $(MAKE) $(MAKESILENT) -f external/glfw/examples/CMakeFiles/splitview.dir/build.make external/glfw/examples/CMakeFiles/splitview.dir/__/deps/glad_gl.c.o
-	cd /Users/myronphan/LinearSystemLibrary/out/build && $(MAKE) $(MAKESILENT) -f external/glfw/examples/CMakeFiles/wave.dir/build.make external/glfw/examples/CMakeFiles/wave.dir/__/deps/glad_gl.c.o
-.PHONY : __/deps/glad_gl.c.o
-
-__/deps/glad_gl.i: __/deps/glad_gl.c.i
-.PHONY : __/deps/glad_gl.i
-
-# target to preprocess a source file
-__/deps/glad_gl.c.i:
-	cd /Users/myronphan/LinearSystemLibrary/out/build && $(MAKE) $(MAKESILENT) -f external/glfw/examples/CMakeFiles/boing.dir/build.make external/glfw/examples/CMakeFiles/boing.dir/__/deps/glad_gl.c.i
-	cd /Users/myronphan/LinearSystemLibrary/out/build && $(MAKE) $(MAKESILENT) -f external/glfw/examples/CMakeFiles/gears.dir/build.make external/glfw/examples/CMakeFiles/gears.dir/__/deps/glad_gl.c.i
-	cd /Users/myronphan/LinearSystemLibrary/out/build && $(MAKE) $(MAKESILENT) -f external/glfw/examples/CMakeFiles/heightmap.dir/build.make external/glfw/examples/CMakeFiles/heightmap.dir/__/deps/glad_gl.c.i
-	cd /Users/myronphan/LinearSystemLibrary/out/build && $(MAKE) $(MAKESILENT) -f external/glfw/examples/CMakeFiles/offscreen.dir/build.make external/glfw/examples/CMakeFiles/offscreen.dir/__/deps/glad_gl.c.i
-	cd /Users/myronphan/LinearSystemLibrary/out/build && $(MAKE) $(MAKESILENT) -f external/glfw/examples/CMakeFiles/particles.dir/build.make external/glfw/examples/CMakeFiles/particles.dir/__/deps/glad_gl.c.i
-	cd /Users/myronphan/LinearSystemLibrary/out/build && $(MAKE) $(MAKESILENT) -f external/glfw/examples/CMakeFiles/sharing.dir/build.make external/glfw/examples/CMakeFiles/sharing.dir/__/deps/glad_gl.c.i
-	cd /Users/myronphan/LinearSystemLibrary/out/build && $(MAKE) $(MAKESILENT) -f external/glfw/examples/CMakeFiles/simple.dir/build.make external/glfw/examples/CMakeFiles/simple.dir/__/deps/glad_gl.c.i
-	cd /Users/myronphan/LinearSystemLibrary/out/build && $(MAKE) $(MAKESILENT) -f external/glfw/examples/CMakeFiles/splitview.dir/build.make external/glfw/examples/CMakeFiles/splitview.dir/__/deps/glad_gl.c.i
-	cd /Users/myronphan/LinearSystemLibrary/out/build && $(MAKE) $(MAKESILENT) -f external/glfw/examples/CMakeFiles/wave.dir/build.make external/glfw/examples/CMakeFiles/wave.dir/__/deps/glad_gl.c.i
-.PHONY : __/deps/glad_gl.c.i
-
-__/deps/glad_gl.s: __/deps/glad_gl.c.s
-.PHONY : __/deps/glad_gl.s
-
-# target to generate assembly for a file
-__/deps/glad_gl.c.s:
-	cd /Users/myronphan/LinearSystemLibrary/out/build && $(MAKE) $(MAKESILENT) -f external/glfw/examples/CMakeFiles/boing.dir/build.make external/glfw/examples/CMakeFiles/boing.dir/__/deps/glad_gl.c.s
-	cd /Users/myronphan/LinearSystemLibrary/out/build && $(MAKE) $(MAKESILENT) -f external/glfw/examples/CMakeFiles/gears.dir/build.make external/glfw/examples/CMakeFiles/gears.dir/__/deps/glad_gl.c.s
-	cd /Users/myronphan/LinearSystemLibrary/out/build && $(MAKE) $(MAKESILENT) -f external/glfw/examples/CMakeFiles/heightmap.dir/build.make external/glfw/examples/CMakeFiles/heightmap.dir/__/deps/glad_gl.c.s
-	cd /Users/myronphan/LinearSystemLibrary/out/build && $(MAKE) $(MAKESILENT) -f external/glfw/examples/CMakeFiles/offscreen.dir/build.make external/glfw/examples/CMakeFiles/offscreen.dir/__/deps/glad_gl.c.s
-	cd /Users/myronphan/LinearSystemLibrary/out/build && $(MAKE) $(MAKESILENT) -f external/glfw/examples/CMakeFiles/particles.dir/build.make external/glfw/examples/CMakeFiles/particles.dir/__/deps/glad_gl.c.s
-	cd /Users/myronphan/LinearSystemLibrary/out/build && $(MAKE) $(MAKESILENT) -f external/glfw/examples/CMakeFiles/sharing.dir/build.make external/glfw/examples/CMakeFiles/sharing.dir/__/deps/glad_gl.c.s
-	cd /Users/myronphan/LinearSystemLibrary/out/build && $(MAKE) $(MAKESILENT) -f external/glfw/examples/CMakeFiles/simple.dir/build.make external/glfw/examples/CMakeFiles/simple.dir/__/deps/glad_gl.c.s
-	cd /Users/myronphan/LinearSystemLibrary/out/build && $(MAKE) $(MAKESILENT) -f external/glfw/examples/CMakeFiles/splitview.dir/build.make external/glfw/examples/CMakeFiles/splitview.dir/__/deps/glad_gl.c.s
-	cd /Users/myronphan/LinearSystemLibrary/out/build && $(MAKE) $(MAKESILENT) -f external/glfw/examples/CMakeFiles/wave.dir/build.make external/glfw/examples/CMakeFiles/wave.dir/__/deps/glad_gl.c.s
-.PHONY : __/deps/glad_gl.c.s
 
 __/deps/tinycthread.o: __/deps/tinycthread.c.o
 .PHONY : __/deps/tinycthread.o
@@ -527,30 +507,6 @@ sharing.c.s:
 	cd /Users/myronphan/LinearSystemLibrary/out/build && $(MAKE) $(MAKESILENT) -f external/glfw/examples/CMakeFiles/sharing.dir/build.make external/glfw/examples/CMakeFiles/sharing.dir/sharing.c.s
 .PHONY : sharing.c.s
 
-simple.o: simple.c.o
-.PHONY : simple.o
-
-# target to build an object file
-simple.c.o:
-	cd /Users/myronphan/LinearSystemLibrary/out/build && $(MAKE) $(MAKESILENT) -f external/glfw/examples/CMakeFiles/simple.dir/build.make external/glfw/examples/CMakeFiles/simple.dir/simple.c.o
-.PHONY : simple.c.o
-
-simple.i: simple.c.i
-.PHONY : simple.i
-
-# target to preprocess a source file
-simple.c.i:
-	cd /Users/myronphan/LinearSystemLibrary/out/build && $(MAKE) $(MAKESILENT) -f external/glfw/examples/CMakeFiles/simple.dir/build.make external/glfw/examples/CMakeFiles/simple.dir/simple.c.i
-.PHONY : simple.c.i
-
-simple.s: simple.c.s
-.PHONY : simple.s
-
-# target to generate assembly for a file
-simple.c.s:
-	cd /Users/myronphan/LinearSystemLibrary/out/build && $(MAKE) $(MAKESILENT) -f external/glfw/examples/CMakeFiles/simple.dir/build.make external/glfw/examples/CMakeFiles/simple.dir/simple.c.s
-.PHONY : simple.c.s
-
 splitview.o: splitview.c.o
 .PHONY : splitview.o
 
@@ -574,6 +530,54 @@ splitview.s: splitview.c.s
 splitview.c.s:
 	cd /Users/myronphan/LinearSystemLibrary/out/build && $(MAKE) $(MAKESILENT) -f external/glfw/examples/CMakeFiles/splitview.dir/build.make external/glfw/examples/CMakeFiles/splitview.dir/splitview.c.s
 .PHONY : splitview.c.s
+
+triangle-opengl.o: triangle-opengl.c.o
+.PHONY : triangle-opengl.o
+
+# target to build an object file
+triangle-opengl.c.o:
+	cd /Users/myronphan/LinearSystemLibrary/out/build && $(MAKE) $(MAKESILENT) -f external/glfw/examples/CMakeFiles/triangle-opengl.dir/build.make external/glfw/examples/CMakeFiles/triangle-opengl.dir/triangle-opengl.c.o
+.PHONY : triangle-opengl.c.o
+
+triangle-opengl.i: triangle-opengl.c.i
+.PHONY : triangle-opengl.i
+
+# target to preprocess a source file
+triangle-opengl.c.i:
+	cd /Users/myronphan/LinearSystemLibrary/out/build && $(MAKE) $(MAKESILENT) -f external/glfw/examples/CMakeFiles/triangle-opengl.dir/build.make external/glfw/examples/CMakeFiles/triangle-opengl.dir/triangle-opengl.c.i
+.PHONY : triangle-opengl.c.i
+
+triangle-opengl.s: triangle-opengl.c.s
+.PHONY : triangle-opengl.s
+
+# target to generate assembly for a file
+triangle-opengl.c.s:
+	cd /Users/myronphan/LinearSystemLibrary/out/build && $(MAKE) $(MAKESILENT) -f external/glfw/examples/CMakeFiles/triangle-opengl.dir/build.make external/glfw/examples/CMakeFiles/triangle-opengl.dir/triangle-opengl.c.s
+.PHONY : triangle-opengl.c.s
+
+triangle-opengles.o: triangle-opengles.c.o
+.PHONY : triangle-opengles.o
+
+# target to build an object file
+triangle-opengles.c.o:
+	cd /Users/myronphan/LinearSystemLibrary/out/build && $(MAKE) $(MAKESILENT) -f external/glfw/examples/CMakeFiles/triangle-opengles.dir/build.make external/glfw/examples/CMakeFiles/triangle-opengles.dir/triangle-opengles.c.o
+.PHONY : triangle-opengles.c.o
+
+triangle-opengles.i: triangle-opengles.c.i
+.PHONY : triangle-opengles.i
+
+# target to preprocess a source file
+triangle-opengles.c.i:
+	cd /Users/myronphan/LinearSystemLibrary/out/build && $(MAKE) $(MAKESILENT) -f external/glfw/examples/CMakeFiles/triangle-opengles.dir/build.make external/glfw/examples/CMakeFiles/triangle-opengles.dir/triangle-opengles.c.i
+.PHONY : triangle-opengles.c.i
+
+triangle-opengles.s: triangle-opengles.c.s
+.PHONY : triangle-opengles.s
+
+# target to generate assembly for a file
+triangle-opengles.c.s:
+	cd /Users/myronphan/LinearSystemLibrary/out/build && $(MAKE) $(MAKESILENT) -f external/glfw/examples/CMakeFiles/triangle-opengles.dir/build.make external/glfw/examples/CMakeFiles/triangle-opengles.dir/triangle-opengles.c.s
+.PHONY : triangle-opengles.c.s
 
 wave.o: wave.c.o
 .PHONY : wave.o
@@ -599,6 +603,30 @@ wave.c.s:
 	cd /Users/myronphan/LinearSystemLibrary/out/build && $(MAKE) $(MAKESILENT) -f external/glfw/examples/CMakeFiles/wave.dir/build.make external/glfw/examples/CMakeFiles/wave.dir/wave.c.s
 .PHONY : wave.c.s
 
+windows.o: windows.c.o
+.PHONY : windows.o
+
+# target to build an object file
+windows.c.o:
+	cd /Users/myronphan/LinearSystemLibrary/out/build && $(MAKE) $(MAKESILENT) -f external/glfw/examples/CMakeFiles/windows.dir/build.make external/glfw/examples/CMakeFiles/windows.dir/windows.c.o
+.PHONY : windows.c.o
+
+windows.i: windows.c.i
+.PHONY : windows.i
+
+# target to preprocess a source file
+windows.c.i:
+	cd /Users/myronphan/LinearSystemLibrary/out/build && $(MAKE) $(MAKESILENT) -f external/glfw/examples/CMakeFiles/windows.dir/build.make external/glfw/examples/CMakeFiles/windows.dir/windows.c.i
+.PHONY : windows.c.i
+
+windows.s: windows.c.s
+.PHONY : windows.s
+
+# target to generate assembly for a file
+windows.c.s:
+	cd /Users/myronphan/LinearSystemLibrary/out/build && $(MAKE) $(MAKESILENT) -f external/glfw/examples/CMakeFiles/windows.dir/build.make external/glfw/examples/CMakeFiles/windows.dir/windows.c.s
+.PHONY : windows.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -617,15 +645,14 @@ help:
 	@echo "... offscreen"
 	@echo "... particles"
 	@echo "... sharing"
-	@echo "... simple"
 	@echo "... splitview"
+	@echo "... triangle-opengl"
+	@echo "... triangle-opengles"
 	@echo "... wave"
+	@echo "... windows"
 	@echo "... __/deps/getopt.o"
 	@echo "... __/deps/getopt.i"
 	@echo "... __/deps/getopt.s"
-	@echo "... __/deps/glad_gl.o"
-	@echo "... __/deps/glad_gl.i"
-	@echo "... __/deps/glad_gl.s"
 	@echo "... __/deps/tinycthread.o"
 	@echo "... __/deps/tinycthread.i"
 	@echo "... __/deps/tinycthread.s"
@@ -647,15 +674,21 @@ help:
 	@echo "... sharing.o"
 	@echo "... sharing.i"
 	@echo "... sharing.s"
-	@echo "... simple.o"
-	@echo "... simple.i"
-	@echo "... simple.s"
 	@echo "... splitview.o"
 	@echo "... splitview.i"
 	@echo "... splitview.s"
+	@echo "... triangle-opengl.o"
+	@echo "... triangle-opengl.i"
+	@echo "... triangle-opengl.s"
+	@echo "... triangle-opengles.o"
+	@echo "... triangle-opengles.i"
+	@echo "... triangle-opengles.s"
 	@echo "... wave.o"
 	@echo "... wave.i"
 	@echo "... wave.s"
+	@echo "... windows.o"
+	@echo "... windows.i"
+	@echo "... windows.s"
 .PHONY : help
 
 

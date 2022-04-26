@@ -1,7 +1,7 @@
 external/glfw/tests/CMakeFiles/events.dir/__/deps/getopt.c.o: \
   /Users/myronphan/LinearSystemLibrary/external/glfw/deps/getopt.c \
   /Users/myronphan/LinearSystemLibrary/external/glfw/deps/getopt.h \
-  /Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include/stddef.h \
+  /Library/Developer/CommandLineTools/usr/lib/clang/12.0.5/include/stddef.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/usr/include/string.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/usr/include/_types.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/usr/include/sys/_types.h \

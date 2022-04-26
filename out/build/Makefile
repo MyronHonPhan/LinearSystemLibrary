@@ -48,10 +48,10 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /opt/homebrew/Cellar/cmake/3.22.2/bin/cmake
+CMAKE_COMMAND = /usr/local/Cellar/cmake/3.22.2/bin/cmake
 
 # The command to remove a file.
-RM = /opt/homebrew/Cellar/cmake/3.22.2/bin/cmake -E rm -f
+RM = /usr/local/Cellar/cmake/3.22.2/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
@@ -78,7 +78,7 @@ edit_cache/fast: edit_cache
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/opt/homebrew/Cellar/cmake/3.22.2/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/usr/local/Cellar/cmake/3.22.2/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -97,37 +97,37 @@ list_install_components/fast: list_install_components
 # Special rule for the target install
 install: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/opt/homebrew/Cellar/cmake/3.22.2/bin/cmake -P cmake_install.cmake
+	/usr/local/Cellar/cmake/3.22.2/bin/cmake -P cmake_install.cmake
 .PHONY : install
 
 # Special rule for the target install
 install/fast: preinstall/fast
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/opt/homebrew/Cellar/cmake/3.22.2/bin/cmake -P cmake_install.cmake
+	/usr/local/Cellar/cmake/3.22.2/bin/cmake -P cmake_install.cmake
 .PHONY : install/fast
 
 # Special rule for the target install/local
 install/local: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/opt/homebrew/Cellar/cmake/3.22.2/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+	/usr/local/Cellar/cmake/3.22.2/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
 .PHONY : install/local
 
 # Special rule for the target install/local
 install/local/fast: preinstall/fast
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/opt/homebrew/Cellar/cmake/3.22.2/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+	/usr/local/Cellar/cmake/3.22.2/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
 .PHONY : install/local/fast
 
 # Special rule for the target install/strip
 install/strip: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/opt/homebrew/Cellar/cmake/3.22.2/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+	/usr/local/Cellar/cmake/3.22.2/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
 .PHONY : install/strip
 
 # Special rule for the target install/strip
 install/strip/fast: preinstall/fast
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/opt/homebrew/Cellar/cmake/3.22.2/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+	/usr/local/Cellar/cmake/3.22.2/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
 .PHONY : install/strip/fast
 
 # The main all target
@@ -201,19 +201,6 @@ uninstall/fast:
 .PHONY : uninstall/fast
 
 #=============================================================================
-# Target rules for targets named update_mappings
-
-# Build rule for target.
-update_mappings: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 update_mappings
-.PHONY : update_mappings
-
-# fast build rule for target.
-update_mappings/fast:
-	$(MAKE) $(MAKESILENT) -f external/glfw/src/CMakeFiles/update_mappings.dir/build.make external/glfw/src/CMakeFiles/update_mappings.dir/build
-.PHONY : update_mappings/fast
-
-#=============================================================================
 # Target rules for targets named glfw
 
 # Build rule for target.
@@ -225,6 +212,19 @@ glfw: cmake_check_build_system
 glfw/fast:
 	$(MAKE) $(MAKESILENT) -f external/glfw/src/CMakeFiles/glfw.dir/build.make external/glfw/src/CMakeFiles/glfw.dir/build
 .PHONY : glfw/fast
+
+#=============================================================================
+# Target rules for targets named update_mappings
+
+# Build rule for target.
+update_mappings: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 update_mappings
+.PHONY : update_mappings
+
+# fast build rule for target.
+update_mappings/fast:
+	$(MAKE) $(MAKESILENT) -f external/glfw/src/CMakeFiles/update_mappings.dir/build.make external/glfw/src/CMakeFiles/update_mappings.dir/build
+.PHONY : update_mappings/fast
 
 #=============================================================================
 # Target rules for targets named boing
@@ -305,19 +305,6 @@ sharing/fast:
 .PHONY : sharing/fast
 
 #=============================================================================
-# Target rules for targets named simple
-
-# Build rule for target.
-simple: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 simple
-.PHONY : simple
-
-# fast build rule for target.
-simple/fast:
-	$(MAKE) $(MAKESILENT) -f external/glfw/examples/CMakeFiles/simple.dir/build.make external/glfw/examples/CMakeFiles/simple.dir/build
-.PHONY : simple/fast
-
-#=============================================================================
 # Target rules for targets named splitview
 
 # Build rule for target.
@@ -331,6 +318,32 @@ splitview/fast:
 .PHONY : splitview/fast
 
 #=============================================================================
+# Target rules for targets named triangle-opengl
+
+# Build rule for target.
+triangle-opengl: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 triangle-opengl
+.PHONY : triangle-opengl
+
+# fast build rule for target.
+triangle-opengl/fast:
+	$(MAKE) $(MAKESILENT) -f external/glfw/examples/CMakeFiles/triangle-opengl.dir/build.make external/glfw/examples/CMakeFiles/triangle-opengl.dir/build
+.PHONY : triangle-opengl/fast
+
+#=============================================================================
+# Target rules for targets named triangle-opengles
+
+# Build rule for target.
+triangle-opengles: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 triangle-opengles
+.PHONY : triangle-opengles
+
+# fast build rule for target.
+triangle-opengles/fast:
+	$(MAKE) $(MAKESILENT) -f external/glfw/examples/CMakeFiles/triangle-opengles.dir/build.make external/glfw/examples/CMakeFiles/triangle-opengles.dir/build
+.PHONY : triangle-opengles/fast
+
+#=============================================================================
 # Target rules for targets named wave
 
 # Build rule for target.
@@ -342,6 +355,32 @@ wave: cmake_check_build_system
 wave/fast:
 	$(MAKE) $(MAKESILENT) -f external/glfw/examples/CMakeFiles/wave.dir/build.make external/glfw/examples/CMakeFiles/wave.dir/build
 .PHONY : wave/fast
+
+#=============================================================================
+# Target rules for targets named windows
+
+# Build rule for target.
+windows: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 windows
+.PHONY : windows
+
+# fast build rule for target.
+windows/fast:
+	$(MAKE) $(MAKESILENT) -f external/glfw/examples/CMakeFiles/windows.dir/build.make external/glfw/examples/CMakeFiles/windows.dir/build
+.PHONY : windows/fast
+
+#=============================================================================
+# Target rules for targets named allocator
+
+# Build rule for target.
+allocator: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 allocator
+.PHONY : allocator
+
+# fast build rule for target.
+allocator/fast:
+	$(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/allocator.dir/build.make external/glfw/tests/CMakeFiles/allocator.dir/build
+.PHONY : allocator/fast
 
 #=============================================================================
 # Target rules for targets named clipboard
@@ -513,19 +552,6 @@ joysticks/fast:
 .PHONY : joysticks/fast
 
 #=============================================================================
-# Target rules for targets named opacity
-
-# Build rule for target.
-opacity: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 opacity
-.PHONY : opacity
-
-# fast build rule for target.
-opacity/fast:
-	$(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/opacity.dir/build.make external/glfw/tests/CMakeFiles/opacity.dir/build
-.PHONY : opacity/fast
-
-#=============================================================================
 # Target rules for targets named tearing
 
 # Build rule for target.
@@ -591,17 +617,17 @@ triangle-vulkan/fast:
 .PHONY : triangle-vulkan/fast
 
 #=============================================================================
-# Target rules for targets named windows
+# Target rules for targets named window
 
 # Build rule for target.
-windows: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 windows
-.PHONY : windows
+window: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 window
+.PHONY : window
 
 # fast build rule for target.
-windows/fast:
-	$(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/windows.dir/build.make external/glfw/tests/CMakeFiles/windows.dir/build
-.PHONY : windows/fast
+window/fast:
+	$(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/window.dir/build.make external/glfw/tests/CMakeFiles/window.dir/build
+.PHONY : window/fast
 
 #=============================================================================
 # Target rules for targets named glew
@@ -791,6 +817,7 @@ help:
 	@echo "... update_mappings"
 	@echo "... a.out"
 	@echo "... adder"
+	@echo "... allocator"
 	@echo "... boing"
 	@echo "... clipboard"
 	@echo "... cursor"
@@ -811,19 +838,20 @@ help:
 	@echo "... monitors"
 	@echo "... msaa"
 	@echo "... offscreen"
-	@echo "... opacity"
 	@echo "... particles"
 	@echo "... reopen"
 	@echo "... sharing"
-	@echo "... simple"
 	@echo "... splitview"
 	@echo "... tearing"
 	@echo "... threads"
 	@echo "... timeout"
 	@echo "... title"
+	@echo "... triangle-opengl"
+	@echo "... triangle-opengles"
 	@echo "... triangle-vulkan"
 	@echo "... visualinfo"
 	@echo "... wave"
+	@echo "... window"
 	@echo "... windows"
 	@echo "... IndexBuffer.o"
 	@echo "... IndexBuffer.i"

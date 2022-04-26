@@ -44,10 +44,10 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /opt/homebrew/Cellar/cmake/3.22.2/bin/cmake
+CMAKE_COMMAND = /usr/local/Cellar/cmake/3.22.2/bin/cmake
 
 # The command to remove a file.
-RM = /opt/homebrew/Cellar/cmake/3.22.2/bin/cmake -E rm -f
+RM = /usr/local/Cellar/cmake/3.22.2/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
@@ -68,7 +68,7 @@ include external/glfw/src/CMakeFiles/update_mappings.dir/progress.make
 
 external/glfw/src/CMakeFiles/update_mappings:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/Users/myronphan/LinearSystemLibrary/out/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Updating gamepad mappings from upstream repository"
-	cd /Users/myronphan/LinearSystemLibrary/external/glfw/src && /opt/homebrew/Cellar/cmake/3.22.2/bin/cmake -P /Users/myronphan/LinearSystemLibrary/external/glfw/CMake/GenerateMappings.cmake mappings.h.in mappings.h
+	cd /Users/myronphan/LinearSystemLibrary/external/glfw/src && /usr/local/Cellar/cmake/3.22.2/bin/cmake -P /Users/myronphan/LinearSystemLibrary/external/glfw/CMake/GenerateMappings.cmake mappings.h.in mappings.h
 
 update_mappings: external/glfw/src/CMakeFiles/update_mappings
 update_mappings: external/glfw/src/CMakeFiles/update_mappings.dir/build.make

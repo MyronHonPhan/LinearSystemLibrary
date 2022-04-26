@@ -48,10 +48,10 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /opt/homebrew/Cellar/cmake/3.22.2/bin/cmake
+CMAKE_COMMAND = /usr/local/Cellar/cmake/3.22.2/bin/cmake
 
 # The command to remove a file.
-RM = /opt/homebrew/Cellar/cmake/3.22.2/bin/cmake -E rm -f
+RM = /usr/local/Cellar/cmake/3.22.2/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
@@ -78,7 +78,7 @@ edit_cache/fast: edit_cache
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/opt/homebrew/Cellar/cmake/3.22.2/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/usr/local/Cellar/cmake/3.22.2/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -97,37 +97,37 @@ list_install_components/fast: list_install_components
 # Special rule for the target install
 install: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/opt/homebrew/Cellar/cmake/3.22.2/bin/cmake -P cmake_install.cmake
+	/usr/local/Cellar/cmake/3.22.2/bin/cmake -P cmake_install.cmake
 .PHONY : install
 
 # Special rule for the target install
 install/fast: preinstall/fast
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/opt/homebrew/Cellar/cmake/3.22.2/bin/cmake -P cmake_install.cmake
+	/usr/local/Cellar/cmake/3.22.2/bin/cmake -P cmake_install.cmake
 .PHONY : install/fast
 
 # Special rule for the target install/local
 install/local: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/opt/homebrew/Cellar/cmake/3.22.2/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+	/usr/local/Cellar/cmake/3.22.2/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
 .PHONY : install/local
 
 # Special rule for the target install/local
 install/local/fast: preinstall/fast
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/opt/homebrew/Cellar/cmake/3.22.2/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+	/usr/local/Cellar/cmake/3.22.2/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
 .PHONY : install/local/fast
 
 # Special rule for the target install/strip
 install/strip: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/opt/homebrew/Cellar/cmake/3.22.2/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+	/usr/local/Cellar/cmake/3.22.2/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
 .PHONY : install/strip
 
 # Special rule for the target install/strip
 install/strip/fast: preinstall/fast
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/opt/homebrew/Cellar/cmake/3.22.2/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+	/usr/local/Cellar/cmake/3.22.2/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
 .PHONY : install/strip/fast
 
 # The main all target
@@ -160,6 +160,20 @@ preinstall/fast:
 depend:
 	cd /Users/myronphan/LinearSystemLibrary/out/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
+
+# Convenience name for target.
+external/glfw/tests/CMakeFiles/allocator.dir/rule:
+	cd /Users/myronphan/LinearSystemLibrary/out/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 external/glfw/tests/CMakeFiles/allocator.dir/rule
+.PHONY : external/glfw/tests/CMakeFiles/allocator.dir/rule
+
+# Convenience name for target.
+allocator: external/glfw/tests/CMakeFiles/allocator.dir/rule
+.PHONY : allocator
+
+# fast build rule for target.
+allocator/fast:
+	cd /Users/myronphan/LinearSystemLibrary/out/build && $(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/allocator.dir/build.make external/glfw/tests/CMakeFiles/allocator.dir/build
+.PHONY : allocator/fast
 
 # Convenience name for target.
 external/glfw/tests/CMakeFiles/clipboard.dir/rule:
@@ -344,20 +358,6 @@ joysticks/fast:
 .PHONY : joysticks/fast
 
 # Convenience name for target.
-external/glfw/tests/CMakeFiles/opacity.dir/rule:
-	cd /Users/myronphan/LinearSystemLibrary/out/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 external/glfw/tests/CMakeFiles/opacity.dir/rule
-.PHONY : external/glfw/tests/CMakeFiles/opacity.dir/rule
-
-# Convenience name for target.
-opacity: external/glfw/tests/CMakeFiles/opacity.dir/rule
-.PHONY : opacity
-
-# fast build rule for target.
-opacity/fast:
-	cd /Users/myronphan/LinearSystemLibrary/out/build && $(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/opacity.dir/build.make external/glfw/tests/CMakeFiles/opacity.dir/build
-.PHONY : opacity/fast
-
-# Convenience name for target.
 external/glfw/tests/CMakeFiles/tearing.dir/rule:
 	cd /Users/myronphan/LinearSystemLibrary/out/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 external/glfw/tests/CMakeFiles/tearing.dir/rule
 .PHONY : external/glfw/tests/CMakeFiles/tearing.dir/rule
@@ -428,18 +428,18 @@ triangle-vulkan/fast:
 .PHONY : triangle-vulkan/fast
 
 # Convenience name for target.
-external/glfw/tests/CMakeFiles/windows.dir/rule:
-	cd /Users/myronphan/LinearSystemLibrary/out/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 external/glfw/tests/CMakeFiles/windows.dir/rule
-.PHONY : external/glfw/tests/CMakeFiles/windows.dir/rule
+external/glfw/tests/CMakeFiles/window.dir/rule:
+	cd /Users/myronphan/LinearSystemLibrary/out/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 external/glfw/tests/CMakeFiles/window.dir/rule
+.PHONY : external/glfw/tests/CMakeFiles/window.dir/rule
 
 # Convenience name for target.
-windows: external/glfw/tests/CMakeFiles/windows.dir/rule
-.PHONY : windows
+window: external/glfw/tests/CMakeFiles/window.dir/rule
+.PHONY : window
 
 # fast build rule for target.
-windows/fast:
-	cd /Users/myronphan/LinearSystemLibrary/out/build && $(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/windows.dir/build.make external/glfw/tests/CMakeFiles/windows.dir/build
-.PHONY : windows/fast
+window/fast:
+	cd /Users/myronphan/LinearSystemLibrary/out/build && $(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/window.dir/build.make external/glfw/tests/CMakeFiles/window.dir/build
+.PHONY : window/fast
 
 __/deps/getopt.o: __/deps/getopt.c.o
 .PHONY : __/deps/getopt.o
@@ -453,7 +453,6 @@ __/deps/getopt.c.o:
 	cd /Users/myronphan/LinearSystemLibrary/out/build && $(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/iconify.dir/build.make external/glfw/tests/CMakeFiles/iconify.dir/__/deps/getopt.c.o
 	cd /Users/myronphan/LinearSystemLibrary/out/build && $(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/monitors.dir/build.make external/glfw/tests/CMakeFiles/monitors.dir/__/deps/getopt.c.o
 	cd /Users/myronphan/LinearSystemLibrary/out/build && $(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/inputlag.dir/build.make external/glfw/tests/CMakeFiles/inputlag.dir/__/deps/getopt.c.o
-	cd /Users/myronphan/LinearSystemLibrary/out/build && $(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/windows.dir/build.make external/glfw/tests/CMakeFiles/windows.dir/__/deps/getopt.c.o
 .PHONY : __/deps/getopt.c.o
 
 __/deps/getopt.i: __/deps/getopt.c.i
@@ -468,7 +467,6 @@ __/deps/getopt.c.i:
 	cd /Users/myronphan/LinearSystemLibrary/out/build && $(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/iconify.dir/build.make external/glfw/tests/CMakeFiles/iconify.dir/__/deps/getopt.c.i
 	cd /Users/myronphan/LinearSystemLibrary/out/build && $(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/monitors.dir/build.make external/glfw/tests/CMakeFiles/monitors.dir/__/deps/getopt.c.i
 	cd /Users/myronphan/LinearSystemLibrary/out/build && $(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/inputlag.dir/build.make external/glfw/tests/CMakeFiles/inputlag.dir/__/deps/getopt.c.i
-	cd /Users/myronphan/LinearSystemLibrary/out/build && $(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/windows.dir/build.make external/glfw/tests/CMakeFiles/windows.dir/__/deps/getopt.c.i
 .PHONY : __/deps/getopt.c.i
 
 __/deps/getopt.s: __/deps/getopt.c.s
@@ -483,113 +481,7 @@ __/deps/getopt.c.s:
 	cd /Users/myronphan/LinearSystemLibrary/out/build && $(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/iconify.dir/build.make external/glfw/tests/CMakeFiles/iconify.dir/__/deps/getopt.c.s
 	cd /Users/myronphan/LinearSystemLibrary/out/build && $(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/monitors.dir/build.make external/glfw/tests/CMakeFiles/monitors.dir/__/deps/getopt.c.s
 	cd /Users/myronphan/LinearSystemLibrary/out/build && $(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/inputlag.dir/build.make external/glfw/tests/CMakeFiles/inputlag.dir/__/deps/getopt.c.s
-	cd /Users/myronphan/LinearSystemLibrary/out/build && $(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/windows.dir/build.make external/glfw/tests/CMakeFiles/windows.dir/__/deps/getopt.c.s
 .PHONY : __/deps/getopt.c.s
-
-__/deps/glad_gl.o: __/deps/glad_gl.c.o
-.PHONY : __/deps/glad_gl.o
-
-# target to build an object file
-__/deps/glad_gl.c.o:
-	cd /Users/myronphan/LinearSystemLibrary/out/build && $(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/clipboard.dir/build.make external/glfw/tests/CMakeFiles/clipboard.dir/__/deps/glad_gl.c.o
-	cd /Users/myronphan/LinearSystemLibrary/out/build && $(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/events.dir/build.make external/glfw/tests/CMakeFiles/events.dir/__/deps/glad_gl.c.o
-	cd /Users/myronphan/LinearSystemLibrary/out/build && $(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/msaa.dir/build.make external/glfw/tests/CMakeFiles/msaa.dir/__/deps/glad_gl.c.o
-	cd /Users/myronphan/LinearSystemLibrary/out/build && $(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/glfwinfo.dir/build.make external/glfw/tests/CMakeFiles/glfwinfo.dir/__/deps/glad_gl.c.o
-	cd /Users/myronphan/LinearSystemLibrary/out/build && $(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/iconify.dir/build.make external/glfw/tests/CMakeFiles/iconify.dir/__/deps/glad_gl.c.o
-	cd /Users/myronphan/LinearSystemLibrary/out/build && $(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/monitors.dir/build.make external/glfw/tests/CMakeFiles/monitors.dir/__/deps/glad_gl.c.o
-	cd /Users/myronphan/LinearSystemLibrary/out/build && $(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/reopen.dir/build.make external/glfw/tests/CMakeFiles/reopen.dir/__/deps/glad_gl.c.o
-	cd /Users/myronphan/LinearSystemLibrary/out/build && $(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/cursor.dir/build.make external/glfw/tests/CMakeFiles/cursor.dir/__/deps/glad_gl.c.o
-	cd /Users/myronphan/LinearSystemLibrary/out/build && $(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/empty.dir/build.make external/glfw/tests/CMakeFiles/empty.dir/__/deps/glad_gl.c.o
-	cd /Users/myronphan/LinearSystemLibrary/out/build && $(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/gamma.dir/build.make external/glfw/tests/CMakeFiles/gamma.dir/__/deps/glad_gl.c.o
-	cd /Users/myronphan/LinearSystemLibrary/out/build && $(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/icon.dir/build.make external/glfw/tests/CMakeFiles/icon.dir/__/deps/glad_gl.c.o
-	cd /Users/myronphan/LinearSystemLibrary/out/build && $(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/inputlag.dir/build.make external/glfw/tests/CMakeFiles/inputlag.dir/__/deps/glad_gl.c.o
-	cd /Users/myronphan/LinearSystemLibrary/out/build && $(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/joysticks.dir/build.make external/glfw/tests/CMakeFiles/joysticks.dir/__/deps/glad_gl.c.o
-	cd /Users/myronphan/LinearSystemLibrary/out/build && $(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/opacity.dir/build.make external/glfw/tests/CMakeFiles/opacity.dir/__/deps/glad_gl.c.o
-	cd /Users/myronphan/LinearSystemLibrary/out/build && $(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/tearing.dir/build.make external/glfw/tests/CMakeFiles/tearing.dir/__/deps/glad_gl.c.o
-	cd /Users/myronphan/LinearSystemLibrary/out/build && $(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/threads.dir/build.make external/glfw/tests/CMakeFiles/threads.dir/__/deps/glad_gl.c.o
-	cd /Users/myronphan/LinearSystemLibrary/out/build && $(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/timeout.dir/build.make external/glfw/tests/CMakeFiles/timeout.dir/__/deps/glad_gl.c.o
-	cd /Users/myronphan/LinearSystemLibrary/out/build && $(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/title.dir/build.make external/glfw/tests/CMakeFiles/title.dir/__/deps/glad_gl.c.o
-	cd /Users/myronphan/LinearSystemLibrary/out/build && $(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/windows.dir/build.make external/glfw/tests/CMakeFiles/windows.dir/__/deps/glad_gl.c.o
-.PHONY : __/deps/glad_gl.c.o
-
-__/deps/glad_gl.i: __/deps/glad_gl.c.i
-.PHONY : __/deps/glad_gl.i
-
-# target to preprocess a source file
-__/deps/glad_gl.c.i:
-	cd /Users/myronphan/LinearSystemLibrary/out/build && $(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/clipboard.dir/build.make external/glfw/tests/CMakeFiles/clipboard.dir/__/deps/glad_gl.c.i
-	cd /Users/myronphan/LinearSystemLibrary/out/build && $(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/events.dir/build.make external/glfw/tests/CMakeFiles/events.dir/__/deps/glad_gl.c.i
-	cd /Users/myronphan/LinearSystemLibrary/out/build && $(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/msaa.dir/build.make external/glfw/tests/CMakeFiles/msaa.dir/__/deps/glad_gl.c.i
-	cd /Users/myronphan/LinearSystemLibrary/out/build && $(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/glfwinfo.dir/build.make external/glfw/tests/CMakeFiles/glfwinfo.dir/__/deps/glad_gl.c.i
-	cd /Users/myronphan/LinearSystemLibrary/out/build && $(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/iconify.dir/build.make external/glfw/tests/CMakeFiles/iconify.dir/__/deps/glad_gl.c.i
-	cd /Users/myronphan/LinearSystemLibrary/out/build && $(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/monitors.dir/build.make external/glfw/tests/CMakeFiles/monitors.dir/__/deps/glad_gl.c.i
-	cd /Users/myronphan/LinearSystemLibrary/out/build && $(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/reopen.dir/build.make external/glfw/tests/CMakeFiles/reopen.dir/__/deps/glad_gl.c.i
-	cd /Users/myronphan/LinearSystemLibrary/out/build && $(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/cursor.dir/build.make external/glfw/tests/CMakeFiles/cursor.dir/__/deps/glad_gl.c.i
-	cd /Users/myronphan/LinearSystemLibrary/out/build && $(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/empty.dir/build.make external/glfw/tests/CMakeFiles/empty.dir/__/deps/glad_gl.c.i
-	cd /Users/myronphan/LinearSystemLibrary/out/build && $(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/gamma.dir/build.make external/glfw/tests/CMakeFiles/gamma.dir/__/deps/glad_gl.c.i
-	cd /Users/myronphan/LinearSystemLibrary/out/build && $(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/icon.dir/build.make external/glfw/tests/CMakeFiles/icon.dir/__/deps/glad_gl.c.i
-	cd /Users/myronphan/LinearSystemLibrary/out/build && $(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/inputlag.dir/build.make external/glfw/tests/CMakeFiles/inputlag.dir/__/deps/glad_gl.c.i
-	cd /Users/myronphan/LinearSystemLibrary/out/build && $(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/joysticks.dir/build.make external/glfw/tests/CMakeFiles/joysticks.dir/__/deps/glad_gl.c.i
-	cd /Users/myronphan/LinearSystemLibrary/out/build && $(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/opacity.dir/build.make external/glfw/tests/CMakeFiles/opacity.dir/__/deps/glad_gl.c.i
-	cd /Users/myronphan/LinearSystemLibrary/out/build && $(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/tearing.dir/build.make external/glfw/tests/CMakeFiles/tearing.dir/__/deps/glad_gl.c.i
-	cd /Users/myronphan/LinearSystemLibrary/out/build && $(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/threads.dir/build.make external/glfw/tests/CMakeFiles/threads.dir/__/deps/glad_gl.c.i
-	cd /Users/myronphan/LinearSystemLibrary/out/build && $(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/timeout.dir/build.make external/glfw/tests/CMakeFiles/timeout.dir/__/deps/glad_gl.c.i
-	cd /Users/myronphan/LinearSystemLibrary/out/build && $(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/title.dir/build.make external/glfw/tests/CMakeFiles/title.dir/__/deps/glad_gl.c.i
-	cd /Users/myronphan/LinearSystemLibrary/out/build && $(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/windows.dir/build.make external/glfw/tests/CMakeFiles/windows.dir/__/deps/glad_gl.c.i
-.PHONY : __/deps/glad_gl.c.i
-
-__/deps/glad_gl.s: __/deps/glad_gl.c.s
-.PHONY : __/deps/glad_gl.s
-
-# target to generate assembly for a file
-__/deps/glad_gl.c.s:
-	cd /Users/myronphan/LinearSystemLibrary/out/build && $(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/clipboard.dir/build.make external/glfw/tests/CMakeFiles/clipboard.dir/__/deps/glad_gl.c.s
-	cd /Users/myronphan/LinearSystemLibrary/out/build && $(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/events.dir/build.make external/glfw/tests/CMakeFiles/events.dir/__/deps/glad_gl.c.s
-	cd /Users/myronphan/LinearSystemLibrary/out/build && $(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/msaa.dir/build.make external/glfw/tests/CMakeFiles/msaa.dir/__/deps/glad_gl.c.s
-	cd /Users/myronphan/LinearSystemLibrary/out/build && $(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/glfwinfo.dir/build.make external/glfw/tests/CMakeFiles/glfwinfo.dir/__/deps/glad_gl.c.s
-	cd /Users/myronphan/LinearSystemLibrary/out/build && $(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/iconify.dir/build.make external/glfw/tests/CMakeFiles/iconify.dir/__/deps/glad_gl.c.s
-	cd /Users/myronphan/LinearSystemLibrary/out/build && $(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/monitors.dir/build.make external/glfw/tests/CMakeFiles/monitors.dir/__/deps/glad_gl.c.s
-	cd /Users/myronphan/LinearSystemLibrary/out/build && $(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/reopen.dir/build.make external/glfw/tests/CMakeFiles/reopen.dir/__/deps/glad_gl.c.s
-	cd /Users/myronphan/LinearSystemLibrary/out/build && $(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/cursor.dir/build.make external/glfw/tests/CMakeFiles/cursor.dir/__/deps/glad_gl.c.s
-	cd /Users/myronphan/LinearSystemLibrary/out/build && $(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/empty.dir/build.make external/glfw/tests/CMakeFiles/empty.dir/__/deps/glad_gl.c.s
-	cd /Users/myronphan/LinearSystemLibrary/out/build && $(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/gamma.dir/build.make external/glfw/tests/CMakeFiles/gamma.dir/__/deps/glad_gl.c.s
-	cd /Users/myronphan/LinearSystemLibrary/out/build && $(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/icon.dir/build.make external/glfw/tests/CMakeFiles/icon.dir/__/deps/glad_gl.c.s
-	cd /Users/myronphan/LinearSystemLibrary/out/build && $(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/inputlag.dir/build.make external/glfw/tests/CMakeFiles/inputlag.dir/__/deps/glad_gl.c.s
-	cd /Users/myronphan/LinearSystemLibrary/out/build && $(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/joysticks.dir/build.make external/glfw/tests/CMakeFiles/joysticks.dir/__/deps/glad_gl.c.s
-	cd /Users/myronphan/LinearSystemLibrary/out/build && $(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/opacity.dir/build.make external/glfw/tests/CMakeFiles/opacity.dir/__/deps/glad_gl.c.s
-	cd /Users/myronphan/LinearSystemLibrary/out/build && $(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/tearing.dir/build.make external/glfw/tests/CMakeFiles/tearing.dir/__/deps/glad_gl.c.s
-	cd /Users/myronphan/LinearSystemLibrary/out/build && $(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/threads.dir/build.make external/glfw/tests/CMakeFiles/threads.dir/__/deps/glad_gl.c.s
-	cd /Users/myronphan/LinearSystemLibrary/out/build && $(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/timeout.dir/build.make external/glfw/tests/CMakeFiles/timeout.dir/__/deps/glad_gl.c.s
-	cd /Users/myronphan/LinearSystemLibrary/out/build && $(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/title.dir/build.make external/glfw/tests/CMakeFiles/title.dir/__/deps/glad_gl.c.s
-	cd /Users/myronphan/LinearSystemLibrary/out/build && $(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/windows.dir/build.make external/glfw/tests/CMakeFiles/windows.dir/__/deps/glad_gl.c.s
-.PHONY : __/deps/glad_gl.c.s
-
-__/deps/glad_vulkan.o: __/deps/glad_vulkan.c.o
-.PHONY : __/deps/glad_vulkan.o
-
-# target to build an object file
-__/deps/glad_vulkan.c.o:
-	cd /Users/myronphan/LinearSystemLibrary/out/build && $(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/glfwinfo.dir/build.make external/glfw/tests/CMakeFiles/glfwinfo.dir/__/deps/glad_vulkan.c.o
-	cd /Users/myronphan/LinearSystemLibrary/out/build && $(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/triangle-vulkan.dir/build.make external/glfw/tests/CMakeFiles/triangle-vulkan.dir/__/deps/glad_vulkan.c.o
-.PHONY : __/deps/glad_vulkan.c.o
-
-__/deps/glad_vulkan.i: __/deps/glad_vulkan.c.i
-.PHONY : __/deps/glad_vulkan.i
-
-# target to preprocess a source file
-__/deps/glad_vulkan.c.i:
-	cd /Users/myronphan/LinearSystemLibrary/out/build && $(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/glfwinfo.dir/build.make external/glfw/tests/CMakeFiles/glfwinfo.dir/__/deps/glad_vulkan.c.i
-	cd /Users/myronphan/LinearSystemLibrary/out/build && $(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/triangle-vulkan.dir/build.make external/glfw/tests/CMakeFiles/triangle-vulkan.dir/__/deps/glad_vulkan.c.i
-.PHONY : __/deps/glad_vulkan.c.i
-
-__/deps/glad_vulkan.s: __/deps/glad_vulkan.c.s
-.PHONY : __/deps/glad_vulkan.s
-
-# target to generate assembly for a file
-__/deps/glad_vulkan.c.s:
-	cd /Users/myronphan/LinearSystemLibrary/out/build && $(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/glfwinfo.dir/build.make external/glfw/tests/CMakeFiles/glfwinfo.dir/__/deps/glad_vulkan.c.s
-	cd /Users/myronphan/LinearSystemLibrary/out/build && $(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/triangle-vulkan.dir/build.make external/glfw/tests/CMakeFiles/triangle-vulkan.dir/__/deps/glad_vulkan.c.s
-.PHONY : __/deps/glad_vulkan.c.s
 
 __/deps/tinycthread.o: __/deps/tinycthread.c.o
 .PHONY : __/deps/tinycthread.o
@@ -617,6 +509,30 @@ __/deps/tinycthread.c.s:
 	cd /Users/myronphan/LinearSystemLibrary/out/build && $(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/empty.dir/build.make external/glfw/tests/CMakeFiles/empty.dir/__/deps/tinycthread.c.s
 	cd /Users/myronphan/LinearSystemLibrary/out/build && $(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/threads.dir/build.make external/glfw/tests/CMakeFiles/threads.dir/__/deps/tinycthread.c.s
 .PHONY : __/deps/tinycthread.c.s
+
+allocator.o: allocator.c.o
+.PHONY : allocator.o
+
+# target to build an object file
+allocator.c.o:
+	cd /Users/myronphan/LinearSystemLibrary/out/build && $(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/allocator.dir/build.make external/glfw/tests/CMakeFiles/allocator.dir/allocator.c.o
+.PHONY : allocator.c.o
+
+allocator.i: allocator.c.i
+.PHONY : allocator.i
+
+# target to preprocess a source file
+allocator.c.i:
+	cd /Users/myronphan/LinearSystemLibrary/out/build && $(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/allocator.dir/build.make external/glfw/tests/CMakeFiles/allocator.dir/allocator.c.i
+.PHONY : allocator.c.i
+
+allocator.s: allocator.c.s
+.PHONY : allocator.s
+
+# target to generate assembly for a file
+allocator.c.s:
+	cd /Users/myronphan/LinearSystemLibrary/out/build && $(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/allocator.dir/build.make external/glfw/tests/CMakeFiles/allocator.dir/allocator.c.s
+.PHONY : allocator.c.s
 
 clipboard.o: clipboard.c.o
 .PHONY : clipboard.o
@@ -906,30 +822,6 @@ msaa.c.s:
 	cd /Users/myronphan/LinearSystemLibrary/out/build && $(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/msaa.dir/build.make external/glfw/tests/CMakeFiles/msaa.dir/msaa.c.s
 .PHONY : msaa.c.s
 
-opacity.o: opacity.c.o
-.PHONY : opacity.o
-
-# target to build an object file
-opacity.c.o:
-	cd /Users/myronphan/LinearSystemLibrary/out/build && $(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/opacity.dir/build.make external/glfw/tests/CMakeFiles/opacity.dir/opacity.c.o
-.PHONY : opacity.c.o
-
-opacity.i: opacity.c.i
-.PHONY : opacity.i
-
-# target to preprocess a source file
-opacity.c.i:
-	cd /Users/myronphan/LinearSystemLibrary/out/build && $(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/opacity.dir/build.make external/glfw/tests/CMakeFiles/opacity.dir/opacity.c.i
-.PHONY : opacity.c.i
-
-opacity.s: opacity.c.s
-.PHONY : opacity.s
-
-# target to generate assembly for a file
-opacity.c.s:
-	cd /Users/myronphan/LinearSystemLibrary/out/build && $(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/opacity.dir/build.make external/glfw/tests/CMakeFiles/opacity.dir/opacity.c.s
-.PHONY : opacity.c.s
-
 reopen.o: reopen.c.o
 .PHONY : reopen.o
 
@@ -1074,29 +966,29 @@ triangle-vulkan.c.s:
 	cd /Users/myronphan/LinearSystemLibrary/out/build && $(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/triangle-vulkan.dir/build.make external/glfw/tests/CMakeFiles/triangle-vulkan.dir/triangle-vulkan.c.s
 .PHONY : triangle-vulkan.c.s
 
-windows.o: windows.c.o
-.PHONY : windows.o
+window.o: window.c.o
+.PHONY : window.o
 
 # target to build an object file
-windows.c.o:
-	cd /Users/myronphan/LinearSystemLibrary/out/build && $(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/windows.dir/build.make external/glfw/tests/CMakeFiles/windows.dir/windows.c.o
-.PHONY : windows.c.o
+window.c.o:
+	cd /Users/myronphan/LinearSystemLibrary/out/build && $(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/window.dir/build.make external/glfw/tests/CMakeFiles/window.dir/window.c.o
+.PHONY : window.c.o
 
-windows.i: windows.c.i
-.PHONY : windows.i
+window.i: window.c.i
+.PHONY : window.i
 
 # target to preprocess a source file
-windows.c.i:
-	cd /Users/myronphan/LinearSystemLibrary/out/build && $(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/windows.dir/build.make external/glfw/tests/CMakeFiles/windows.dir/windows.c.i
-.PHONY : windows.c.i
+window.c.i:
+	cd /Users/myronphan/LinearSystemLibrary/out/build && $(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/window.dir/build.make external/glfw/tests/CMakeFiles/window.dir/window.c.i
+.PHONY : window.c.i
 
-windows.s: windows.c.s
-.PHONY : windows.s
+window.s: window.c.s
+.PHONY : window.s
 
 # target to generate assembly for a file
-windows.c.s:
-	cd /Users/myronphan/LinearSystemLibrary/out/build && $(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/windows.dir/build.make external/glfw/tests/CMakeFiles/windows.dir/windows.c.s
-.PHONY : windows.c.s
+window.c.s:
+	cd /Users/myronphan/LinearSystemLibrary/out/build && $(MAKE) $(MAKESILENT) -f external/glfw/tests/CMakeFiles/window.dir/build.make external/glfw/tests/CMakeFiles/window.dir/window.c.s
+.PHONY : window.c.s
 
 # Help Target
 help:
@@ -1110,6 +1002,7 @@ help:
 	@echo "... install/strip"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
+	@echo "... allocator"
 	@echo "... clipboard"
 	@echo "... cursor"
 	@echo "... empty"
@@ -1122,26 +1015,22 @@ help:
 	@echo "... joysticks"
 	@echo "... monitors"
 	@echo "... msaa"
-	@echo "... opacity"
 	@echo "... reopen"
 	@echo "... tearing"
 	@echo "... threads"
 	@echo "... timeout"
 	@echo "... title"
 	@echo "... triangle-vulkan"
-	@echo "... windows"
+	@echo "... window"
 	@echo "... __/deps/getopt.o"
 	@echo "... __/deps/getopt.i"
 	@echo "... __/deps/getopt.s"
-	@echo "... __/deps/glad_gl.o"
-	@echo "... __/deps/glad_gl.i"
-	@echo "... __/deps/glad_gl.s"
-	@echo "... __/deps/glad_vulkan.o"
-	@echo "... __/deps/glad_vulkan.i"
-	@echo "... __/deps/glad_vulkan.s"
 	@echo "... __/deps/tinycthread.o"
 	@echo "... __/deps/tinycthread.i"
 	@echo "... __/deps/tinycthread.s"
+	@echo "... allocator.o"
+	@echo "... allocator.i"
+	@echo "... allocator.s"
 	@echo "... clipboard.o"
 	@echo "... clipboard.i"
 	@echo "... clipboard.s"
@@ -1178,9 +1067,6 @@ help:
 	@echo "... msaa.o"
 	@echo "... msaa.i"
 	@echo "... msaa.s"
-	@echo "... opacity.o"
-	@echo "... opacity.i"
-	@echo "... opacity.s"
 	@echo "... reopen.o"
 	@echo "... reopen.i"
 	@echo "... reopen.s"
@@ -1199,9 +1085,9 @@ help:
 	@echo "... triangle-vulkan.o"
 	@echo "... triangle-vulkan.i"
 	@echo "... triangle-vulkan.s"
-	@echo "... windows.o"
-	@echo "... windows.i"
-	@echo "... windows.s"
+	@echo "... window.o"
+	@echo "... window.i"
+	@echo "... window.s"
 .PHONY : help
 
 

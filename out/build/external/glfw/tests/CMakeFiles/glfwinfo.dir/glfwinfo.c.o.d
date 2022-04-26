@@ -1,8 +1,7 @@
 external/glfw/tests/CMakeFiles/glfwinfo.dir/glfwinfo.c.o: \
   /Users/myronphan/LinearSystemLibrary/external/glfw/tests/glfwinfo.c \
   /Users/myronphan/LinearSystemLibrary/external/glfw/deps/glad/gl.h \
-  /Users/myronphan/LinearSystemLibrary/external/glfw/deps/glad/khrplatform.h \
-  /Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include/stdint.h \
+  /Library/Developer/CommandLineTools/usr/lib/clang/12.0.5/include/stdint.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/usr/include/stdint.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/usr/include/sys/_types/_int8_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/usr/include/sys/_types/_int16_t.h \
@@ -29,10 +28,6 @@ external/glfw/tests/CMakeFiles/glfwinfo.dir/glfwinfo.c.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/usr/include/sys/_types/_uintptr_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/usr/include/_types/_intmax_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/usr/include/_types/_uintmax_t.h \
-  /Users/myronphan/LinearSystemLibrary/external/glfw/deps/glad/vulkan.h \
-  /Users/myronphan/LinearSystemLibrary/external/glfw/deps/glad/vk_platform.h \
-  /Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include/stddef.h \
-  /Users/myronphan/LinearSystemLibrary/external/glfw/include/GLFW/glfw3.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/usr/include/stdio.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/usr/include/_stdio.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/usr/include/Availability.h \
@@ -85,4 +80,8 @@ external/glfw/tests/CMakeFiles/glfwinfo.dir/glfwinfo.c.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/usr/include/strings.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/usr/include/secure/_strings.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/usr/include/secure/_string.h \
+  /Users/myronphan/LinearSystemLibrary/external/glfw/deps/glad/vulkan.h \
+  /Library/Developer/CommandLineTools/usr/lib/clang/12.0.5/include/stddef.h \
+  /Users/myronphan/LinearSystemLibrary/external/glfw/include/GLFW/glfw3.h \
+  /Library/Developer/CommandLineTools/usr/lib/clang/12.0.5/include/stdbool.h \
   /Users/myronphan/LinearSystemLibrary/external/glfw/deps/getopt.h

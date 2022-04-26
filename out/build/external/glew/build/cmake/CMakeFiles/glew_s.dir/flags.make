@@ -6,7 +6,5 @@ C_DEFINES = -DGLEW_NO_GLU -DGLEW_STATIC
 
 C_INCLUDES = -I/Users/myronphan/LinearSystemLibrary/external/glew/build/cmake/../../include
 
-C_FLAGSx86_64 =  -arch x86_64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk
-
-C_FLAGS =  -arch x86_64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk
+C_FLAGS =  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk
 
